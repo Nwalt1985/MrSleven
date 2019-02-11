@@ -1,0 +1,11 @@
+// @import "mixins";
+@import "variables";
+@import "navigation_admin";
+@import "navigation";
+@import "forms";
+@import "footer";
+
+/* pages */
+@import "pages/user-control";
+@import "pages/admin-gallery";
+@import "pages/gallery";

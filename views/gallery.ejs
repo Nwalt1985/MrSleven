@@ -1,0 +1,24 @@
+<% if ( global.is_gallery_page_live ) { %>
+
+	<%- include( '../partials/head.ejs' ); %>
+	<%- include( '../partials/nav.ejs' ); %>
+
+	<div class="body container-fluid">
+
+		<div class="row">
+
+			<% for( let image in image_path ) { %>
+				<a href="<%= image_path[ image ] %>">
+					<img class="col-xs-12 col-md-4 col-lg-3" 
+						src='<%= image_path[ image ] %>' 
+						alt="Tawny illustration image_<%= image %>" 
+					/>
+				</a>
+			<% } %>
+		</div>
+
+	</div>
+
+	<%- include( '../partials/footer.ejs' ); %>
+
+<% } %>

@@ -1,0 +1,93 @@
+/** 
+ * Navigation bar defaults for the admin panel 
+ */ 
+
+ul {
+	margin 	: 0;
+	li {
+		list-style-type : none;
+		margin 			: 5px;
+	}
+	a:hover {
+		text-decoration : none;
+	}
+}
+
+
+.nav-admin {
+	background-color : $nav-background-color;
+	.page-title {
+		color 			: $nav-font-color;
+		display 		: inline-block;
+		margin-left 	: 25px;
+		padding-top 	: 5px;
+	}
+	.navbar-toggler {
+		float 	: right;
+		height 	: 30px;
+		width 	: 30px;
+		margin 	: 10px;
+	}
+	.navbar-collapse {
+		ul {
+		padding : 5px;
+			a {
+				padding : 10px;
+				color 	: $nav-font-color;
+					&:hover {
+						color : $nav-font-color;
+					}
+			}	
+		}
+	}
+
+}
+.navbar {
+	border-radius 	: 0px;
+	margin-bottom 	: 0px;
+	// box-shadow 		: -3px 3px 5px 0px #999
+}
+
+/* 
+	Mobile Styling	
+*/
+
+@media( min-width : 700px ) {
+	nav {
+		.page-title {
+			padding : 5px 5px 5px 10px;
+		}
+		.navbar-collapse {
+			float 		: right;
+			position 	: relative;
+			top 		: 4px;
+			font-size 	: 1.4rem;
+		}
+		.navbar-toggler {
+			display : none;
+		}
+	}
+	.side-menu {
+		background-color 	: $nav-background-color;
+		text-align 		 	: center;
+		height 				: 100vh;
+		// box-shadow 			: 3px 3px 5px #999;
+
+		.side-menu--nav {
+			padding : 0;
+		}
+		.side-menu--nav__link {
+			color : $footer-background-color;
+			&:hover {
+				color : $footer-background-color;
+			}
+		}
+		.side-menu--nav__toggle {
+			padding : 0;
+			li a {
+				color : $footer-background-color;
+			}
+		} 
+	}
+}
+

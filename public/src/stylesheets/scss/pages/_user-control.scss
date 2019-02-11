@@ -1,0 +1,13 @@
+@media( min-width : 700px ) {
+	.user-control {
+		.body {
+			.usercontrol {
+				padding : 20px;
+			}
+			.createuser, .deleteuser, .edituserpass {
+				display : inline-block;
+				margin-right : 20px;
+			}
+		}
+	}
+}

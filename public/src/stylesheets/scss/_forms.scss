@@ -1,0 +1,17 @@
+/*
+ Forms
+*/
+.image-upload, .image-delete {
+	.upload-form, .delete-image-form {
+		input, select {
+			width 			: 100%;
+		}
+		.upload-image-btn, .delete-image-btn {
+			margin-top : 20px;
+		}
+	}
+}
+
+@media( min-width : 700px ) {
+
+}

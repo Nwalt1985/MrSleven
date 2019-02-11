@@ -1,0 +1,25 @@
+<%- include( '../partials/head.ejs' ); %>
+<%- include( '../partials/nav.ejs' ); %>
+    
+    <div class="body container">    
+        <h2>Please sign in below.</h2>
+
+        <!-- show any messages that come back with authentication -->
+        <% if (message.length > 0) { %>
+            <div class="alert alert-danger"><%= message %></div>
+        <% } %>
+
+        <form class="well" action="/login" method="post">
+            <label>User Name</label>
+            <input class="form-control" type="text" name="username" required>
+
+            <label>Password</label>
+            <input class="form-control" type="password" name="password" required>
+
+            <button class="btn btn-primary" type="submit" name="submit">Login</button>
+        </form>
+        
+        <a href="/" title="return to homepage">Return to homepage</a>
+    </div>
+
+<%- include( '../partials/footer.ejs' ); %>
