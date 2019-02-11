@@ -1,8 +1,8 @@
 {
-    "name": "tawnyillustration",
+    "name": "myCMS",
     "version": "1.0.0",
     "sideEffects": false,
-    "description": "Artist page for Tawny Illustration",
+    "description": "Custom CMS for private use",
     "private": true,
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
