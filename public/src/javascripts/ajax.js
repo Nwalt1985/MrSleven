@@ -3,24 +3,13 @@
 */
 import $ from 'jquery';
 
-// if( process.env.NODE_ENV !== 'development') {
-//     console.log('in production mode');
-
-//     var str_url = 'https://tawnyillustration.herokuapp.com/usergallery';
-    
-// } else {
-//     console.log( 'in development mode');
-
-//     var str_url = 'http://devserver:3000/usergallery';
-// }
-
 async function callApi( data ) {
     
     data.returnFormat = 'json'
     
     try {
         await $.ajax({
-            url         : 'https://tawnyillustration.herokuapp.com/usergallery'
+            url         : 'https://my-cms-private.herokuapp.com/usergallery'
             ,method     : 'POST'
             ,data       : data
             ,dataType   : 'json'
