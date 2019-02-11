@@ -122,7 +122,7 @@ module.exports = {
 	getPageControlData  : async function ( page_name ) {
 
 		try {
-			const str_qry = 'SELECT * FROM `heroku_87d7309d257ab1e`.`page_control` WHERE `page_name` LIKE ?;';
+			const str_qry = 'SELECT * FROM `heroku_2eca09813f14bb6`.`page_control` WHERE `page_name` LIKE ?;';
 
 			let arr_params = [ page_name ];
 
@@ -139,7 +139,7 @@ module.exports = {
 
 	updatePageLive : async function ( page_name, is_live ) {
 		try {
-			const str_qry = 'UPDATE `heroku_87d7309d257ab1e`.`page_control` SET `is_live` = ? WHERE `page_name` LIKE ?;';
+			const str_qry = 'UPDATE `heroku_2eca09813f14bb6`.`page_control` SET `is_live` = ? WHERE `page_name` LIKE ?;';
 
 			let arr_params = [ is_live, page_name ]
 
