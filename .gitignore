@@ -1,5 +1,6 @@
 /node_modules
-/tmp/*
-
 .env
 .env.default
+config/*
+bin/*
+models/*

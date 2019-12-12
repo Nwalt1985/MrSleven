@@ -1,0 +1,15 @@
+.navigation {
+  background-color: #000000e6;
+  padding: 10px 30px;
+
+  .nav-title, .nav-link {
+    color: #EEE;
+    text-decoration: none;
+  }
+
+  .fill-remaining-space {
+    display: flex;
+    flex: 1 1 auto;
+  }
+
+}
