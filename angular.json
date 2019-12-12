@@ -24,7 +24,7 @@
             "tsConfig": "frontend/mrSleven/tsconfig.app.json",
             "aot": false,
             "assets": [
-              "favicon.ico",
+              "assets/favicon.ico",
               "assets"
             ],
             "styles": [
@@ -90,7 +90,7 @@
             "tsConfig": "frontend/mrSleven/tsconfig.spec.json",
             "karmaConfig": "frontend/mrSleven/karma.conf.js",
             "assets": [
-              "favicon.ico",
+              "assets/favicon.ico",
               "assets"
             ],
             "styles": [
