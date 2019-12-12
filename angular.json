@@ -1,0 +1,132 @@
+{
+  "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
+  "version": 1,
+  "newProjectRoot": "projects",
+  "projects": {
+    "mycms": {
+      "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
+      "root": "",
+      "sourceRoot": "src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "frontend/mrSleven/dist",
+            "index": "frontend/mrSleven/src/index.html",
+            "main": "frontend/mrSleven/src/main.ts",
+            "polyfills": "frontend/mrSleven/src/polyfills.ts",
+            "tsConfig": "frontend/mrSleven/tsconfig.app.json",
+            "aot": false,
+            "assets": [
+              "frontend/mrSleven/src/favicon.ico",
+              "frontend/mrSleven/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "frontend/mrSleven/src/styles.scss"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "frontend/mrSleven/src/environments/environment.ts",
+                  "with": "frontend/mrSleven/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "extractCss": true,
+              "namedChunks": false,
+              "aot": true,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "mrsleven:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "mrsleven:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "mrsleven:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "frontend/mrSleven/src/test.ts",
+            "polyfills": "frontend/mrSleven/src/polyfills.ts",
+            "tsConfig": "frontend/mrSleven/tsconfig.spec.json",
+            "karmaConfig": "frontend/mrSleven/karma.conf.js",
+            "assets": [
+              "frontend/mrSleven/src/favicon.ico",
+              "frontend/mrSleven/src/assets"
+            ],
+            "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "frontend/mrSleven/src/styles.scss"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "frontend/mrSleven/tsconfig.app.json",
+              "frontend/mrSleven/tsconfig.spec.json",
+              "frontend/mrSleven/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "frontend/mrSleven/e2e/protractor.conf.js",
+            "devServerTarget": "mrsleven:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "mrsleven:serve:production"
+            }
+          }
+        }
+      }
+    }
+  },
+  "defaultProject": "mrsleven"
+}
