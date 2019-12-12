@@ -44,10 +44,10 @@ app.use('/home', homepageRouter);
 app.use('/about', aboutRouter);
 app.use('/admin', adminRouter);
 
-// Catch all other routes and return the index file
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'frontend/mrSleven/dist/index.html'));
-});
+// // Catch all other routes and return the index file
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'frontend/mrSleven/dist/index.html'));
+// });
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
