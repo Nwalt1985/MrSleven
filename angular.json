@@ -24,8 +24,8 @@
             "tsConfig": "frontend/mrSleven/tsconfig.app.json",
             "aot": false,
             "assets": [
-              "./frontend/mrSleven/src/favicon.ico",
-              "./frontend/mrSleven/src/assets"
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
@@ -90,8 +90,8 @@
             "tsConfig": "frontend/mrSleven/tsconfig.spec.json",
             "karmaConfig": "frontend/mrSleven/karma.conf.js",
             "assets": [
-              "./frontend/mrSleven/src/favicon.ico",
-              "./frontend/mrSleven/src/assets"
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
