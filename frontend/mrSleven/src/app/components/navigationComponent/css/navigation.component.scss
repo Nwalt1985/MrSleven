@@ -5,11 +5,17 @@
   .nav-title, .nav-link {
     color: #EEE;
     text-decoration: none;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 1.8rem;
   }
 
   .fill-remaining-space {
     display: flex;
     flex: 1 1 auto;
+  }
+
+  .nav-link {
+    margin-left: 40px;
   }
 
 }

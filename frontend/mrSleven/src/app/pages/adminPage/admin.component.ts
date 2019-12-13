@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./css/admin.component.scss']
 })
 
-export class AdminAppComponent {
+export class AdminPageComponent {
   title = 'Admin';
 }

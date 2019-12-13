@@ -3,9 +3,10 @@ import { Routes, RouterModule } from '@angular/router';
 
 /* Custom Components */
 import { LandingPageAppComponent } from './pages/landingPage/landingpage.component';
-import { HomeAppComponent } from './pages/homePage/home.component';
-import { AboutAppComponent } from './pages/aboutPage/about.component';
-import { AdminAppComponent } from './pages/adminPage/admin.component';
+import { HomePageComponent } from './pages/homePage/home.component';
+import { AboutPageComponent } from './pages/aboutPage/about.component';
+import { AdminPageComponent } from './pages/adminPage/admin.component';
+import { GalleryPageComponent } from './pages/galleryPage/galleryPage.component';
 
 const routes: Routes = [
   {
@@ -14,19 +15,19 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomeAppComponent
+    component: HomePageComponent
   },
   {
     path: 'about',
-    component: AboutAppComponent
+    component: AboutPageComponent
+  },
+  {
+    path: 'gallery',
+    component: GalleryPageComponent
   },
   {
     path: 'admin',
-    component: AdminAppComponent
-  },
-  {
-    path: '**',
-    component: LandingPageAppComponent
+    component: AdminPageComponent
   }
 ];
 

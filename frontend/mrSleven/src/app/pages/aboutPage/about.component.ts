@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./css/about.component.scss']
 })
 
-export class AboutAppComponent {
+export class AboutPageComponent {
   title = 'about';
 }

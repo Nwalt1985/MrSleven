@@ -1,0 +1,4 @@
+<div class="container" *ngFor="let index of aboutContent">
+  <h1 class="about-header">{{index.header}}</h1>
+  <div [innerHTML]="index.content" class="about-text"></div>
+</div>

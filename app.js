@@ -1,16 +1,22 @@
 require('dotenv').config();
 
-const express  		   = require('express');
-const createError 	 = require('http-errors');
-const port    		   = process.env.PORT || 3000;
-const mongoose 		   = require('mongoose');
-const path           = require('path');
-const bodyParser     = require('body-parser');
+const express  		    = require('express');
+const createError 	  = require('http-errors');
+const port    		    = process.env.PORT || 3000;
+const path            = require('path');
+const bodyParser      = require('body-parser');
+const mongoose        = require('mongoose');
 
-/*
-DB connection & Models
+
+/* 
+Connect to Mongo Atlas
 */
-const configDB  = require('./config/database.js');
+mongoose.connect(process.env.MONGODB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true
+});
+
+const connection = mongoose.connection;
 
 /* 
 Require our custom routes
@@ -37,7 +43,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'frontend/mrSleven/dist')));
 
 /*
-  Public routes
+Public routes
 */
 app.use('/', indexRouter);
 app.use('/home', homepageRouter);
@@ -45,9 +51,10 @@ app.use('/about', aboutRouter);
 app.use('/admin', adminRouter);
 
 // // Catch all other routes and return the index file
-// app.get('*', (req, res) => {
-//   res.sendFile(path.join(__dirname, 'frontend/mrSleven/dist/index.html'));
-// });
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'frontend/mrSleven/dist/index.html'));
+});
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

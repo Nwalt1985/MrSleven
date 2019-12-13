@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./css/home.component.scss']
 })
 
-export class HomeAppComponent {
+export class HomePageComponent {
   title = 'about';
 }
