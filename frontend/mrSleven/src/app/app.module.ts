@@ -10,7 +10,8 @@ import { MatFormFieldModule,
          MatCardModule,
          MatMenuModule,
          MatButtonModule,
-         MatToolbarModule } from '@angular/material';
+         MatToolbarModule,
+         MatIconModule } from '@angular/material';
 
 /* Pages */
 import { LandingPageAppComponent } from './pages/landingPage/landingpage.component';
@@ -46,7 +47,8 @@ import { AboutTextComponent } from './components/aboutTextComponent/aboutText.co
     MatCardModule,
     MatButtonModule,
     MatMenuModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatIconModule
   ],
   providers: [],
   bootstrap: [AppComponent]

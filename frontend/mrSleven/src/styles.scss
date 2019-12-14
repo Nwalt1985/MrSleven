@@ -1,4 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+$background-color: #000000e6;
+$font-family: 'Permanent Marker', cursive;
 
 html, body {
   height: 100%;
@@ -6,10 +8,28 @@ html, body {
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: #000000e6;
+  background-color: $background-color;
 }
 
 .container {
   max-width: 80%;
   margin: 0 auto;
 }
+
+.dropdown-menu {
+  background: #000;
+  text-align: center;
+
+  .nav-link-mobile {
+    color: #EEE;
+    display: block;
+    text-decoration: none;
+    font-family: $font-family;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+      &:not(:last-child) {
+        border-bottom: 1px solid #ff00008f;
+      }
+  }
+}
+
