@@ -11,6 +11,10 @@ body {
   background-color: $background-color;
 }
 
+.header {
+  color: #EEE;
+}
+
 .container {
   max-width: 80%;
   margin: 0 auto;
@@ -21,7 +25,7 @@ body {
   text-align: center;
 
   .nav-link-mobile {
-    color: #EEE;
+    color: #DFDFDF;
     display: block;
     text-decoration: none;
     font-family: $font-family;

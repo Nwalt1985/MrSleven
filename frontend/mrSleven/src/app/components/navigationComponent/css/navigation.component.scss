@@ -3,7 +3,7 @@ $background-color: #000;
 $font-family: 'Permanent Marker', cursive;
 
 /* MOBILE STYLING AND COMMON*/
-.navigation {
+.body .navigation {
   background-color: $background-color;
   padding: 10px 0 10px 20px;
 
@@ -16,10 +16,11 @@ $font-family: 'Permanent Marker', cursive;
   }
 
   .nav-title, .nav-link, .nav-button {
-    color: #EEE;
+    color: #DFDFDF;
     text-decoration: none;
     font-family: $font-family;
     font-size: 1.8rem;
+    letter-spacing: 3px;
   }
 
   .mobile-nav {
@@ -36,8 +37,8 @@ $font-family: 'Permanent Marker', cursive;
 
 /* DESKTOP STYLING */
 @media only screen and (min-width: 1020px) {
-  .navigation {
-    padding: 10px 20px;
+  .body .navigation {
+    padding: 10px 0px 10px 20px;
 
     .mobile-nav {
       display: none;
@@ -47,10 +48,14 @@ $font-family: 'Permanent Marker', cursive;
       display: block;
       float: right;
 
+      .nav-item:not(:last-child):after {
+        content: '|';
+        color: #ff00008f;
+        font-size: 1.6rem;
+      }
       .nav-link {
-        margin-left: 30px;
+        padding: 0 30px;
       }
     }
-
   }
 }

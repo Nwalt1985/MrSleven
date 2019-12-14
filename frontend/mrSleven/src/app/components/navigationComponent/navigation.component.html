@@ -2,7 +2,7 @@
   <div class="nav">
 
     <a class="nav-link" routerLink="/home" routerLinkActive="active">
-      <span class="nav-header">Mr.Sleven</span>
+      <span class="nav-header">Mr<span style="color:#ff00008f">.</span>Sleven</span>
     </a>
 
     <!-- Mobile Navigation -->
@@ -18,14 +18,25 @@
         <a class="nav-link nav-link-mobile"
            routerLink="/gallery"
            routerLinkActive="active">Gallery</a>
+
+           <a class="nav-link nav-link-mobile"
+           routerLink="/contact"
+           routerLinkActive="active">Contact</a>
       </mat-menu>
     </div>
 
     <!-- Desktop Navigation -->
     <div class="desktop-nav">
       <span class="nav-links-group">
-        <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
-        <a class="nav-link" routerLink="/gallery" routerLinkActive="active">Gallery</a>
+        <span class="nav-item">
+          <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
+        </span>
+        <span class="nav-item">
+          <a class="nav-link" routerLink="/gallery" routerLinkActive="active">Gallery</a>
+        </span>
+        <span class="nav-item">
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
+        </span>
       </span>
     </div>
   </div>

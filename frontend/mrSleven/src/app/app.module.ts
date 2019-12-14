@@ -19,11 +19,13 @@ import { HomePageComponent } from './pages/homePage/home.component';
 import { AboutPageComponent } from './pages/aboutPage/about.component';
 import { AdminPageComponent } from './pages/adminPage/admin.component';
 import { GalleryPageComponent } from './pages/galleryPage/galleryPage.component';
+import { ContactPageComponent } from './pages/contactPage/contactPage.component';
 
 /* Components */
 import { LoginAppComponent } from './components/loginComponent/login.component';
 import { NavigationAppComponent } from './components/navigationComponent/navigation.component';
 import { AboutTextComponent } from './components/aboutTextComponent/aboutText.component';
+import { SocialComponent } from './components/socialComponent/social.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { AboutTextComponent } from './components/aboutTextComponent/aboutText.co
     LoginAppComponent,
     GalleryPageComponent,
     NavigationAppComponent,
-    AboutTextComponent
+    AboutTextComponent,
+    ContactPageComponent,
+    SocialComponent
   ],
   imports: [
     BrowserModule,

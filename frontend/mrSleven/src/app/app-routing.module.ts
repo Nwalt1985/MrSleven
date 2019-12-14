@@ -7,6 +7,7 @@ import { HomePageComponent } from './pages/homePage/home.component';
 import { AboutPageComponent } from './pages/aboutPage/about.component';
 import { AdminPageComponent } from './pages/adminPage/admin.component';
 import { GalleryPageComponent } from './pages/galleryPage/galleryPage.component';
+import { ContactPageComponent } from './pages/contactPage/contactPage.component';
 
 const routes: Routes = [
   {
@@ -24,6 +25,10 @@ const routes: Routes = [
   {
     path: 'gallery',
     component: GalleryPageComponent
+  },
+  {
+    path: 'contact',
+    component: ContactPageComponent
   },
   {
     path: 'admin',
