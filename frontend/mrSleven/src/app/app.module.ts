@@ -4,6 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxGalleryModule } from "ngx-gallery";
 
 import { MatFormFieldModule,
          MatInputModule,
@@ -26,6 +27,7 @@ import { LoginAppComponent } from './components/loginComponent/login.component';
 import { NavigationAppComponent } from './components/navigationComponent/navigation.component';
 import { AboutTextComponent } from './components/aboutTextComponent/aboutText.component';
 import { SocialComponent } from './components/socialComponent/social.component';
+import { GalleryComponent } from './components/galleryComponent/gallery.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +41,8 @@ import { SocialComponent } from './components/socialComponent/social.component';
     NavigationAppComponent,
     AboutTextComponent,
     ContactPageComponent,
-    SocialComponent
+    SocialComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
@@ -52,7 +55,8 @@ import { SocialComponent } from './components/socialComponent/social.component';
     MatButtonModule,
     MatMenuModule,
     MatToolbarModule,
-    MatIconModule
+    MatIconModule,
+    NgxGalleryModule
   ],
   providers: [],
   bootstrap: [AppComponent]

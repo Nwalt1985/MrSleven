@@ -34,6 +34,7 @@
     "dotenv": "^8.2.0",
     "ejs": "^3.0.1",
     "express": "~4.16.1",
+    "font-awesome": "^4.7.0",
     "hammerjs": "^2.0.8",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
