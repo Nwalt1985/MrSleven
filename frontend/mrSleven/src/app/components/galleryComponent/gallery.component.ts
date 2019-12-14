@@ -31,7 +31,7 @@ export class GalleryComponent implements OnInit {
       {
         breakpoint: 800,
         width: '100%',
-        height: '600px',
+        height: '580px',
         imagePercent: 80,
         thumbnailsPercent: 20,
         thumbnailsMargin: 20,

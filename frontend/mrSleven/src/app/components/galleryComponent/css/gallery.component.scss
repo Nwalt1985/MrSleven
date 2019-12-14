@@ -1,12 +1,19 @@
 .gallery-container {
   height: 90%;
-  margin-top: 25px;
+  margin-bottom: 10px;
+  position: relative;
+  top: 15px;
 }
 .container {
   max-width: 95%;
 }
 @media only screen and (min-width: 1020px) {
   .gallery-container {
+    margin-top: 25px;
     padding: 0 200px;
+    height: 82%;
+    margin-bottom: 15px;
+    position: relative;
+    top: 30px;
   }
 }
