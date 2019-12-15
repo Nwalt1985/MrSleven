@@ -5,6 +5,8 @@ var mongoose = require('mongoose');
 var aboutSchema = mongoose.Schema({
     header: String,
     content: String,
+    bottomContent: String,
+    images: Array,
     date: { type: Date, default: Date.now },
 });
 

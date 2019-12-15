@@ -1,4 +1,17 @@
 <div class="container" *ngFor="let index of aboutContent">
+
   <h1 class="about-header">{{index.header}}</h1>
+
   <div [innerHTML]="index.content" class="about-text"></div>
+
+  <div class="about-image-group">
+    <img *ngFor="let image of index.images" src="{{image.src}}" alt="{{image.alt}}">
+  </div>
+
+  <div [innerHTML]="index.bottomContent"></div>
+
+  <div class="signature">
+    <img src="https://via.placeholder.com/200x50?text=Signature" alt="Mr.Sleven's Signature">
+  </div>
+
 </div>

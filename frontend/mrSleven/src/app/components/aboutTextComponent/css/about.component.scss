@@ -1,3 +1,34 @@
 .about-header, .about-text {
   color: #EEE;
 }
+
+.about-image-group {
+  text-align: center;
+    img {
+      margin: 5px;
+    }
+}
+
+.signature {
+  text-align: center;
+  margin: 20px 0;
+}
+
+@media only screen and (min-width: 768px) {
+  .signature {
+    margin: 40px 0 15%;
+  }
+}
+
+@media only screen and (min-width: 1028px) {
+  .about-image-group {
+    img {
+      margin: 10px 20px;
+    }
+  }
+  .signature {
+    margin: 0;
+    position: relative;
+    top: 40px;
+  }
+}

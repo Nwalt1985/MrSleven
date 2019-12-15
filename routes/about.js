@@ -10,7 +10,7 @@ router.get("/content", (req, res, next) => {
   /* Get Content  */
   try {
     
-    mongoAbout.find({},{_id:0, header:1, content:1}, (err, result) => {
+    mongoAbout.find({},{_id:0}, (err, result) => {
       res.json(result);
     })
     
