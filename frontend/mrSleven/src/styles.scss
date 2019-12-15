@@ -1,6 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
 $background-color: #000000e6;
 $font-family: 'Permanent Marker', cursive;
+$font-color: #DFDFDF;
 
 html, body {
   height: 100%;
@@ -26,7 +27,7 @@ body {
   text-align: center;
 
   .nav-link-mobile {
-    color: #DFDFDF;
+    color: $font-color;
     display: block;
     text-decoration: none;
     font-family: $font-family;
@@ -40,6 +41,10 @@ body {
 
 /* Contact Form */
 .contact-form {
+  .mat-input-element {
+    caret-color: #ff00008f;
+    color: $font-color;
+  }
   .mat-form-field-label {
     color: #DFDFDF;
   }
