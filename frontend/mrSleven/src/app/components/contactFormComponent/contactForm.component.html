@@ -2,20 +2,23 @@
   <div class="contact-form">
     <mat-form-field>
       <input matInput placeholder="Name" class="name-input">
+      <input type="hidden" name="botCatchName">
     </mat-form-field>
 
     <mat-form-field>
       <input matInput placeholder="E-mail" class="email-input">
+      <input type="hidden" name="botCatchEmail">
     </mat-form-field>
 
     <mat-form-field>
       <textarea matInput
                 placeholder="Message"
                 class="message-input"
-                rows="10"
+                rows="8"
                 required>
 
       </textarea>
+      <input type="hidden" name="botCatchMessage">
     </mat-form-field>
     <div class="send-email-container">
       <button mat-raised-button class="btn-send-email">Send</button>
