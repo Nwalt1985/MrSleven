@@ -3,7 +3,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 /* Custom Components */
 import { LandingPageAppComponent } from './pages/landingPage/landingpage.component';
-// import { HomePageComponent } from './pages/homePage/home.component';
 import { AboutPageComponent } from './pages/aboutPage/about.component';
 import { AdminPageComponent } from './pages/adminPage/admin.component';
 import { GalleryPageComponent } from './pages/galleryPage/galleryPage.component';
@@ -14,10 +13,6 @@ const routes: Routes = [
     path: '',
     component: LandingPageAppComponent
   },
-  // {
-  //   path: 'home',
-  //   component: HomePageComponent
-  // },
   {
     path: 'about',
     component: AboutPageComponent

@@ -22,7 +22,6 @@ const connection = mongoose.connection;
 Require our custom routes
 */
 const indexRouter = require('./routes/index');
-const homepageRouter = require('./routes/home');
 const aboutRouter = require('./routes/about');
 const adminRouter = require('./routes/admin');
 
@@ -46,7 +45,6 @@ app.use(express.static(path.join(__dirname, 'frontend/mrSleven/dist')));
 Public routes
 */
 app.use('/', indexRouter);
-app.use('/home', homepageRouter);
 app.use('/about', aboutRouter);
 app.use('/admin', adminRouter);
 
