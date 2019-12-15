@@ -16,7 +16,7 @@ import { MatFormFieldModule,
 
 /* Pages */
 import { LandingPageAppComponent } from './pages/landingPage/landingpage.component';
-import { HomePageComponent } from './pages/homePage/home.component';
+// import { HomePageComponent } from './pages/homePage/home.component';
 import { AboutPageComponent } from './pages/aboutPage/about.component';
 import { AdminPageComponent } from './pages/adminPage/admin.component';
 import { GalleryPageComponent } from './pages/galleryPage/galleryPage.component';
@@ -33,7 +33,7 @@ import { GalleryComponent } from './components/galleryComponent/gallery.componen
   declarations: [
     AppComponent,
     LandingPageAppComponent,
-    HomePageComponent,
+    // HomePageComponent,
     AboutPageComponent,
     AdminPageComponent,
     LoginAppComponent,
