@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgxGalleryModule } from "ngx-gallery";
+import { NgxGalleryModule } from 'ngx-gallery';
 
 import { MatFormFieldModule,
          MatInputModule,
@@ -27,6 +27,7 @@ import { NavigationAppComponent } from './components/navigationComponent/navigat
 import { AboutTextComponent } from './components/aboutTextComponent/aboutText.component';
 import { SocialComponent } from './components/socialComponent/social.component';
 import { GalleryComponent } from './components/galleryComponent/gallery.component';
+import { ContactFormComponent } from './components/contactFormComponent/contactForm.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { GalleryComponent } from './components/galleryComponent/gallery.componen
     AboutTextComponent,
     ContactPageComponent,
     SocialComponent,
-    GalleryComponent
+    GalleryComponent,
+    ContactFormComponent
   ],
   imports: [
     BrowserModule,

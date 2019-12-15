@@ -20,6 +20,7 @@ body {
   max-width: 90%;
 }
 
+/* Navigation dropdown menu */
 .dropdown-menu {
   background: #000;
   text-align: center;
@@ -37,6 +38,12 @@ body {
   }
 }
 
+/* Contact Form */
+.contact-form {
+  .mat-form-field-label {
+    color: #DFDFDF;
+  }
+}
 
 @media only screen and (min-width: 1020px) {
   .container {
