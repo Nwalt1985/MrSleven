@@ -14,6 +14,8 @@ import { MatFormFieldModule,
          MatToolbarModule,
          MatIconModule } from '@angular/material';
 
+import { FormsModule } from '@angular/forms';
+
 /* Pages */
 import { LandingPageAppComponent } from './pages/landingPage/landingpage.component';
 import { AboutPageComponent } from './pages/aboutPage/about.component';
@@ -56,7 +58,8 @@ import { ContactFormComponent } from './components/contactFormComponent/contactF
     MatMenuModule,
     MatToolbarModule,
     MatIconModule,
-    NgxGalleryModule
+    NgxGalleryModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

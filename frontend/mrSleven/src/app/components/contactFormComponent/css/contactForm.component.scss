@@ -1,4 +1,8 @@
-.contact-form {
+.botHoneyPot {
+  display: none;
+}
+
+.contact-form .form {
   width: 90%;
   margin: 10% auto;
 
@@ -21,12 +25,12 @@
   }
 }
 
-.contact-form > * {
+.contact-form .form > * {
   width: 100%;
 }
 
 @media only screen and (min-width: 1020px) {
-  .contact-form {
+  .contact-form .form {
     margin: 0;
     position: fixed;
     top: 47%;

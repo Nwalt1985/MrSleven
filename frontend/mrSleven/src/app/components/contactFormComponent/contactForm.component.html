@@ -1,28 +1,60 @@
 <div class="container">
   <div class="contact-form">
-    <mat-form-field>
-      <input matInput placeholder="Name" class="name-input">
-      <input type="hidden" name="botCatchName">
-    </mat-form-field>
+    <form (submit)="validateFormData( postForm )" class="form" #postForm="ngForm">
 
-    <mat-form-field>
-      <input matInput placeholder="E-mail" class="email-input">
-      <input type="hidden" name="botCatchEmail">
-    </mat-form-field>
+        <mat-form-field>
+          <input matInput
+                 placeholder="Name"
+                 class="name-input"
+                 name="nameField"
+                 type="text"
+                 ngModel
+                 #nameInput="ngModel"
+                 required>
 
-    <mat-form-field>
-      <textarea matInput
-                placeholder="Message"
-                class="message-input"
-                rows="8"
-                required>
+          <mat-error *ngIf="( nameInput.invalid )">Please enter your name.</mat-error>
+        </mat-form-field>
 
-      </textarea>
-      <input type="hidden" name="botCatchMessage">
-    </mat-form-field>
-    <div class="send-email-container">
-      <button mat-raised-button class="btn-send-email">Send</button>
-    </div>
+        <div class="botHoneyPotGroup">
+          <label class="botHoneyPot" for="name"></label>
+          <input type="text" name="name" [(ngModel)]="botCatchName" autocomplete="off" class="botHoneyPot">
+        </div>
+
+        <mat-form-field>
+          <input matInput
+                 placeholder="E-mail"
+                 class="email-input"
+                 name="emailField"
+                 type="email"
+                 required
+                 ngModel
+                 pattern="{{emailPattern}}"
+                 #emailInput="ngModel">
+
+          <mat-error *ngIf="( emailInput.invalid )">Please enter a valid email address.</mat-error>
+
+        </mat-form-field>
+
+        <div class="botHoneyPotGroup">
+          <label class="botHoneyPot" for="email"></label>
+          <input type="email" name="email" [(ngModel)]="botCatchEmail" autocomplete="off" class="botHoneyPot">
+        </div>
+
+        <mat-form-field>
+          <textarea matInput
+          placeholder="Message"
+          class="message-input"
+          rows="8"
+          name="messageField"
+          ngModel
+          #messageContent="ngModel"
+          required></textarea>
+
+        </mat-form-field>
+      <div class="send-email-container">
+        <button mat-raised-button class="btn-send-email" type="submit" [disabled]="!postForm.valid">Send</button>
+      </div>
+   </form>
   </div>
 </div>
 
