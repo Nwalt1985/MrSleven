@@ -41,6 +41,17 @@
         </div>
 
         <mat-form-field>
+          <input matInput
+                 placeholder="Subject"
+                 class="subject-input"
+                 name="subjectField"
+                 type="text"
+                 ngModel
+                 #subjectInput="ngModel">
+
+        </mat-form-field>
+
+        <mat-form-field>
           <textarea matInput
           placeholder="Message"
           class="message-input"

@@ -24,6 +24,7 @@ Require our custom routes
 const indexRouter = require('./routes/index');
 const aboutRouter = require('./routes/about');
 const adminRouter = require('./routes/admin');
+const contactRouter = require('./routes/contact');
 
 const app = express();
 
@@ -47,6 +48,7 @@ Public routes
 app.use('/', indexRouter);
 app.use('/about', aboutRouter);
 app.use('/admin', adminRouter);
+app.use('/contact', contactRouter);
 
 // // Catch all other routes and return the index file
 app.get('*', (req, res) => {

@@ -39,11 +39,15 @@ export class ContactFormComponent {
       const formData = {
         name: form.value.nameField,
         sender: form.value.emailField,
+        subject: form.value.subjectField,
         message: form.value.messageField
       };
 
-      this.contactFormService.submitUserEmail(formData);
+      this.contactFormService.submitUserEmail(formData).subscribe( result => {
+        alert('Email Sent');
+        form.reset();
+      });
     }
-
   }
+
 }
