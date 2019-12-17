@@ -6,7 +6,12 @@ const port    		    = process.env.PORT || 3000;
 const path            = require('path');
 const bodyParser      = require('body-parser');
 const mongoose        = require('mongoose');
+const passport        = require('passport');
 
+/* 
+  Require Passport config
+*/
+require('./passport/passport');
 
 /* 
 Connect to Mongo Atlas
@@ -39,6 +44,9 @@ app.use(bodyParser.json()); // get information from html forms
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
+// Use Passport middleware
+app.use(passport.initialize());
+
 // CONNECT TO ANGULAR FRONTEND
 app.use(express.static(path.join(__dirname, 'frontend/mrSleven/dist')));
 
@@ -63,6 +71,7 @@ app.use(function(req, res, next) {
 
 // error handler
 app.use(function(err, req, res, next) {
+
   // set locals, only providing error in development
   res.locals.message = err.message;
   res.locals.error = req.app.get('env') === 'development' ? err : {};

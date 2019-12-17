@@ -1,0 +1,27 @@
+<form (submit)="register( registerForm )" #registerForm="ngForm">
+  <div class="form-group">
+    
+    <label for="email">Email address</label>
+
+    <input type="email" 
+           class="form-control" 
+           name="email" 
+           placeholder="Enter email" 
+           ngModel
+           #emailInput="ngModel">
+  </div>
+
+  <div class="form-group">
+
+    <label for="password">Password</label>
+
+    <input type="password" 
+           class="form-control" 
+           name="password" 
+           placeholder="Password"
+           ngModel 
+           #passwordInput="ngModel">
+  </div>
+
+  <button type="submit" class="btn btn-default">Register!</button>
+</form>

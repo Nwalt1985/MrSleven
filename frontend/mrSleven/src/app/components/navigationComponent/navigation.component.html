@@ -19,9 +19,19 @@
            routerLink="/gallery"
            routerLinkActive="active">Gallery</a>
 
-           <a class="nav-link nav-link-mobile"
-           routerLink="/contact"
-           routerLinkActive="active">Contact</a>
+        <a class="nav-link nav-link-mobile"
+        routerLink="/contact"
+        routerLinkActive="active">Contact</a>
+
+        <a class="nav-link nav-link-mobile" 
+           *ngIf="auth.isLoggedIn()" 
+           routerLink="/admin/home" 
+           routerLinkActive="active">Admin</a>
+
+        <a class="nav-link nav-link-mobile" 
+           *ngIf="auth.isLoggedIn()"  
+           (click)="auth.logout()">Logout</a>
+
       </mat-menu>
     </div>
 
@@ -36,6 +46,12 @@
         </span>
         <span class="nav-item">
           <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
+        </span>
+        <span class="nav-item" *ngIf="auth.isLoggedIn()">
+          <a class="nav-link" routerLink="/admin/home" routerLinkActive="active">Admin</a>
+        </span>
+        <span class="nav-item" *ngIf="auth.isLoggedIn()">
+          <a class="nav-link" (click)="auth.logout()">Logout</a>
         </span>
       </span>
     </div>

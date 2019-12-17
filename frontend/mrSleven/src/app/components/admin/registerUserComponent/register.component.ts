@@ -1,14 +1,15 @@
 import { Component } from '@angular/core';
-import { AuthenticationService, TokenPayload } from '../../authentication.service';
+import { AuthenticationService, TokenPayload } from '../../../authentication.service';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 
+
 @Component({
-  selector: 'app-login-component',
-  templateUrl: './login.component.html',
-  styleUrls: ['./css/login.component.scss']
+  selector: 'app-register-component',
+  templateUrl: './register.component.html',
+  styleUrls: ['css/register.component.scss']
 })
-export class LoginAppComponent {
+export class RegisterComponent {
 
   credentials: TokenPayload = {
     email: '',
@@ -18,19 +19,19 @@ export class LoginAppComponent {
 
   constructor(private auth: AuthenticationService, private router: Router) {}
 
-  login( form: NgForm ) {
+  register( form: NgForm ) {
 
     this.credentials = {
       email: form.value.email,
       username: form.value.email,
       password: form.value.password
-    };
+    }
 
-    this.auth.login(this.credentials).subscribe(
+    this.auth.register(this.credentials).subscribe(
       () => {
-        this.router.navigateByUrl('/admin/home');
+        this.router.navigateByUrl('admin/home');
       },
-      (err) => {
+      err => {
         console.error(err);
       }
     );

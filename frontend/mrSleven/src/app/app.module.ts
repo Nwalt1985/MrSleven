@@ -19,9 +19,12 @@ import { FormsModule } from '@angular/forms';
 /* Pages */
 import { LandingPageAppComponent } from './pages/landingPage/landingpage.component';
 import { AboutPageComponent } from './pages/aboutPage/about.component';
-import { AdminPageComponent } from './pages/adminPage/admin.component';
+import { LoginPageComponent } from './pages/loginPage/login.component';
 import { GalleryPageComponent } from './pages/galleryPage/galleryPage.component';
 import { ContactPageComponent } from './pages/contactPage/contactPage.component';
+
+/* Admin Pages */
+import { AdminHomePageComponent } from './pages/admin/adminHomePage/adminHomePage.component';
 
 /* Components */
 import { LoginAppComponent } from './components/loginComponent/login.component';
@@ -30,13 +33,15 @@ import { AboutTextComponent } from './components/aboutTextComponent/aboutText.co
 import { SocialComponent } from './components/socialComponent/social.component';
 import { GalleryComponent } from './components/galleryComponent/gallery.component';
 import { ContactFormComponent } from './components/contactFormComponent/contactForm.component';
+import { RegisterComponent } from './components/admin/registerUserComponent/register.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageAppComponent,
     AboutPageComponent,
-    AdminPageComponent,
+    LoginPageComponent,
     LoginAppComponent,
     GalleryPageComponent,
     NavigationAppComponent,
@@ -44,7 +49,9 @@ import { ContactFormComponent } from './components/contactFormComponent/contactF
     ContactPageComponent,
     SocialComponent,
     GalleryComponent,
-    ContactFormComponent
+    ContactFormComponent,
+    AdminHomePageComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

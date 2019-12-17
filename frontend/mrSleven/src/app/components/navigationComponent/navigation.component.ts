@@ -1,4 +1,5 @@
 import { Component, ViewEncapsulation } from '@angular/core';
+import { AuthenticationService } from '../../authentication.service';
 
 @Component({
   selector: 'app-navigation-component',
@@ -9,5 +10,9 @@ import { Component, ViewEncapsulation } from '@angular/core';
 
 export class NavigationAppComponent {
   title = 'Navigation';
-  backdropClass = 'dropdown-menu';
+
+
+  constructor(public auth: AuthenticationService) {}
+
+
 }

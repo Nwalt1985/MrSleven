@@ -4,9 +4,15 @@ import { Routes, RouterModule } from '@angular/router';
 /* Custom Components */
 import { LandingPageAppComponent } from './pages/landingPage/landingpage.component';
 import { AboutPageComponent } from './pages/aboutPage/about.component';
-import { AdminPageComponent } from './pages/adminPage/admin.component';
+import { LoginPageComponent } from './pages/loginPage/login.component';
 import { GalleryPageComponent } from './pages/galleryPage/galleryPage.component';
 import { ContactPageComponent } from './pages/contactPage/contactPage.component';
+
+/* Admin Components */
+import { AdminHomePageComponent } from './pages/admin/adminHomePage/adminHomePage.component';
+
+/* Authentication for admin pages */
+import { AuthGuardService } from './auth-guard.service';
 
 const routes: Routes = [
   {
@@ -26,14 +32,20 @@ const routes: Routes = [
     component: ContactPageComponent
   },
   {
-    path: 'admin',
-    component: AdminPageComponent
+    path: 'login',
+    component: LoginPageComponent
+  },
+  {
+    path: 'admin/home',
+    component: AdminHomePageComponent,
+    canActivate: [ AuthGuardService ]
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  providers:[AuthGuardService],
 })
 
 export class AppRoutingModule { }
