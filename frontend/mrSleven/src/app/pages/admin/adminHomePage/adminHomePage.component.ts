@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AuthenticationService, UserDetails } from '../../../authentication.service';
 
 @Component({
@@ -13,11 +13,12 @@ export class AdminHomePageComponent {
 
   constructor(private auth: AuthenticationService) {}
 
-  ngOnInit() {    
-    this.auth.profile().subscribe(user => {
-      this.details = user;
-    }, (err) => {
-      console.error(err);
-    });
-  }
+  // ngOnInit() {
+  //   this.auth.profile().subscribe(user => {
+  //     this.details = user;
+  //   }, (err) => {
+  //     console.error(err);
+  //   });
+  // }
+
 }

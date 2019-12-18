@@ -1,0 +1,14 @@
+.social-media-group {
+  background-color: #000;
+  position: static;
+  bottom: 0;
+  left: 0;
+
+  .icon-group {
+    margin: 0 auto;
+    .social-link {
+      color: #DFDFDF;
+      padding: 0 20px;
+    }
+  }
+}

@@ -23,17 +23,22 @@ export class RegisterComponent {
 
     this.credentials = {
       email: form.value.email,
-      username: form.value.email,
+      username: form.value.username,
       password: form.value.password
     }
 
-    this.auth.register(this.credentials).subscribe(
-      () => {
-        this.router.navigateByUrl('admin/home');
-      },
-      err => {
-        console.error(err);
-      }
-    );
+    if ( confirm(`Are you sure you want to create the user ${this.credentials.username}?`) ) {
+
+      this.auth.register(this.credentials).subscribe(
+        () => {
+          this.router.navigateByUrl('admin/user');
+          alert('User created');
+          form.reset();
+        },
+        err => {
+          console.error(err);
+        }
+      );
+    }
   }
 }

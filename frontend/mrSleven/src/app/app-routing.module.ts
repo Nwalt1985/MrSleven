@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-/* Custom Components */
-import { LandingPageAppComponent } from './pages/landingPage/landingpage.component';
-import { AboutPageComponent } from './pages/aboutPage/about.component';
-import { LoginPageComponent } from './pages/loginPage/login.component';
-import { GalleryPageComponent } from './pages/galleryPage/galleryPage.component';
-import { ContactPageComponent } from './pages/contactPage/contactPage.component';
+/* Page Components */
+import { LandingPageAppComponent } from './pages/public/landingPage/landing.component';
+import { AboutPageComponent } from './pages/public/aboutPage/about.component';
+import { LoginPageComponent } from './pages/public/loginPage/login.component';
+import { GalleryPageComponent } from './pages/public/galleryPage/galleryPage.component';
+import { ContactPageComponent } from './pages/public/contactPage/contactPage.component';
 
 /* Admin Components */
 import { AdminHomePageComponent } from './pages/admin/adminHomePage/adminHomePage.component';
+import { AdminUserPageComponent } from './pages/admin/adminUserPage/adminUserPage.component';
 
 /* Authentication for admin pages */
 import { AuthGuardService } from './auth-guard.service';
@@ -39,13 +40,18 @@ const routes: Routes = [
     path: 'admin/home',
     component: AdminHomePageComponent,
     canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'admin/user',
+    component: AdminUserPageComponent,
+    canActivate: [ AuthGuardService ]
   }
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
-  providers:[AuthGuardService],
+  providers: [AuthGuardService],
 })
 
 export class AppRoutingModule { }

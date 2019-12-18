@@ -1,0 +1,50 @@
+.sidenav-container {
+  background-color: #000;
+  display: flex;
+  height: 70px;
+
+    .mat-list-base {
+      display: flex;
+      position: relative;
+      top: 17px;
+      padding-left: 0;
+      margin: 0 auto;
+    }
+
+    .nav-item {
+      margin-bottom: 40px;
+      text-align: center;
+    }
+    .nav-link {
+      color: #DFDFDF;
+      margin: 0 auto;
+      text-decoration: none;
+    }
+    .icon {
+      font-size: 2.5rem;
+      display: block;
+      margin-bottom: 0 auto 13px;
+      height: auto;
+      width: auto;
+    }
+
+}
+
+@media only screen and (min-width: 1020px) {
+  .sidenav-container {
+    position: absolute;
+    top: 64px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    max-width: 100px;
+    height: 93%;
+    display: block;
+    padding: 20px 0;
+
+    .mat-list-base {
+      display: block;
+    }
+  }
+
+}

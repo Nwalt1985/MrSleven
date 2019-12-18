@@ -1,27 +1,46 @@
-<form (submit)="register( registerForm )" #registerForm="ngForm">
-  <div class="form-group">
-    
-    <label for="email">Email address</label>
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>
+      Add new admin user
+    </mat-card-title>
+  </mat-card-header>
 
-    <input type="email" 
-           class="form-control" 
-           name="email" 
-           placeholder="Enter email" 
-           ngModel
-           #emailInput="ngModel">
-  </div>
+  <mat-card-content>
+    <form (submit)="register( registerForm )" #registerForm="ngForm">
+      <div class="form-container">
+        <mat-form-field>
+          <input type="text"
+            class="form-input"
+            name="username"
+            placeholder="Enter a username"
+            ngModel
+            matInput
+            #usernameInput="ngModel">
+        </mat-form-field>
 
-  <div class="form-group">
+        <mat-form-field>
+          <input type="email"
+            class="form-input"
+            name="email"
+            placeholder="Enter email"
+            ngModel
+            matInput
+            #emailInput="ngModel">
+        </mat-form-field>
 
-    <label for="password">Password</label>
-
-    <input type="password" 
-           class="form-control" 
-           name="password" 
-           placeholder="Password"
-           ngModel 
-           #passwordInput="ngModel">
-  </div>
-
-  <button type="submit" class="btn btn-default">Register!</button>
-</form>
+        <mat-form-field>
+          <input type="password"
+            class="form-input"
+            name="password"
+            placeholder="Password"
+            ngModel
+            matInput
+            #passwordInput="ngModel">
+        </mat-form-field>
+        <mat-card-actions class="card-action">
+            <button mat-raised-button type="submit" class="btn btn-default" color="primary">Register</button>
+        </mat-card-actions>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
