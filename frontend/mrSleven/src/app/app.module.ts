@@ -42,6 +42,7 @@ import { RegisterComponent } from './components/admin/registerUserComponent/regi
 import { SideNavigationComponent } from './components/admin/sideNavComponent/sideNav.component';
 import { UserLoggedInComponent } from './components/public/userLoggedInComponent/userLoggedIn.Component';
 import { DeleteUserComponent } from './components/admin/deleteUserComponent/delete.component';
+import { UpdatePasswordComponent } from './components/admin/updatePasswordComponent/updatePass.component';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,8 @@ import { DeleteUserComponent } from './components/admin/deleteUserComponent/dele
     UserLoggedInComponent,
     RegisterComponent,
     SideNavigationComponent,
-    DeleteUserComponent
+    DeleteUserComponent,
+    UpdatePasswordComponent
   ],
   imports: [
     BrowserModule,

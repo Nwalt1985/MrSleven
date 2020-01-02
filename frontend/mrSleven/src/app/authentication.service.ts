@@ -4,27 +4,11 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 
-export interface UserDetails {
-  _id: string;
-  email: string;
-  username: string;
-  exp: number;
-  iat: number;
-}
-
-interface TokenResponse {
-  token: string;
-}
-
-export interface TokenPayload {
-  email: string;
-  password: string;
-  username?: string;
-}
-export interface TokenPayloadUser {
-  id: string;
-  username?: string;
-}
+import { UserDetails,
+         TokenResponse,
+         TokenPayload,
+         TokenPayloadUser,
+         TokenPayloadUpdatePass } from './app-interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -99,8 +83,8 @@ export class AuthenticationService {
   */
   private request(
     method: 'post' | 'get',
-    type: 'login' | 'register' | 'profile' | 'delete' | 'get-users',
-    dataPayload?: TokenPayload | TokenPayloadUser,
+    type: 'login' | 'register' | 'profile' | 'delete' | 'get-users' | 'update-pass',
+    dataPayload?: TokenPayload | TokenPayloadUser | TokenPayloadUpdatePass,
     params?: string
   ): Observable<any> {
     let base;
@@ -153,12 +137,18 @@ export class AuthenticationService {
     return this.request('get', 'profile');
   }
 
+  public getAdminUsers(): Observable<any> {
+    return this.request('get', 'get-users');
+  }
+
   public delete(user: TokenPayloadUser): Observable<any> {
     return this.request('post', 'delete', user);
   }
 
-  public getAdminUsers(): Observable<any> {
-    return this.request('get', 'get-users');
+  public updatePass(user: TokenPayloadUpdatePass): Observable<any> {
+    return this.request('post', 'update-pass', user);
   }
+
+
 }
 
