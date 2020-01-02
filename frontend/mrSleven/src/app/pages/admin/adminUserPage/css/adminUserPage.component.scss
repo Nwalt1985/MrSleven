@@ -1,3 +1,8 @@
 .header {
   text-align: center;
 }
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 2fr);
+  grid-gap: 1rem;
+}

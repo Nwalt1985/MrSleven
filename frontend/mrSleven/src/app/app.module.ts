@@ -41,7 +41,7 @@ import { ContactFormComponent } from './components/public/contactFormComponent/c
 import { RegisterComponent } from './components/admin/registerUserComponent/register.component';
 import { SideNavigationComponent } from './components/admin/sideNavComponent/sideNav.component';
 import { UserLoggedInComponent } from './components/public/userLoggedInComponent/userLoggedIn.Component';
-
+import { DeleteUserComponent } from './components/admin/deleteUserComponent/delete.component';
 
 @NgModule({
   declarations: [
@@ -61,7 +61,8 @@ import { UserLoggedInComponent } from './components/public/userLoggedInComponent
     AdminUserPageComponent,
     UserLoggedInComponent,
     RegisterComponent,
-    SideNavigationComponent
+    SideNavigationComponent,
+    DeleteUserComponent
   ],
   imports: [
     BrowserModule,

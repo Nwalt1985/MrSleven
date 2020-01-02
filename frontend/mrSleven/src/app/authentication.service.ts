@@ -21,6 +21,10 @@ export interface TokenPayload {
   password: string;
   username?: string;
 }
+export interface TokenPayloadUser {
+  id: string;
+  username?: string;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -95,16 +99,28 @@ export class AuthenticationService {
   */
   private request(
     method: 'post' | 'get',
-    type: 'login' | 'register' | 'profile',
-    user?: TokenPayload
+    type: 'login' | 'register' | 'profile' | 'delete' | 'get-users',
+    dataPayload?: TokenPayload | TokenPayloadUser,
+    params?: string
   ): Observable<any> {
     let base;
 
     if (method === 'post') {
-      base = this.http.post(`admin/auth/${type}`, user);
+
+      base = this.http.post(`admin/auth/${type}`, dataPayload, {
+        headers: {
+          Authorization: `Bearer ${this.getToken()}`,
+        }
+      });
+
     } else {
       base = this.http.get(`admin/auth/${type}`, {
-        headers: { Authorization: `Bearer ${this.getToken()}` }
+        headers: {
+          Authorization: `Bearer ${this.getToken()}`,
+        },
+        params : {
+          data: params
+        }
       });
     }
 
@@ -135,6 +151,14 @@ export class AuthenticationService {
 
   public profile(): Observable<any> {
     return this.request('get', 'profile');
+  }
+
+  public delete(user: TokenPayloadUser): Observable<any> {
+    return this.request('post', 'delete', user);
+  }
+
+  public getAdminUsers(): Observable<any> {
+    return this.request('get', 'get-users');
   }
 }
 
