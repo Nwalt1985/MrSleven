@@ -12,8 +12,8 @@
 </div>
 
 <div class="show-more">
-  <button mat-fab>
-    <mat-icon aria-hidden="false" aria-label="show more" (click)="showMore()">keyboard_arrow_down</mat-icon>
+  <button mat-fab (click)="showMore()">
+    <mat-icon aria-hidden="false" aria-label="show more">keyboard_arrow_down</mat-icon>
   </button>
   <p class="scroll-to-top" *ngIf="galleryLimit > 16" (click)="scrollToTop()">Back to top
     <span> / </span>
