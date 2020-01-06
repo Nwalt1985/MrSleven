@@ -44,13 +44,13 @@ const routes: Routes = [
   },
   {
     path: 'admin/user',
-    component: AdminUserPageComponent
-    // canActivate: [ AuthGuardService ]
+    component: AdminUserPageComponent,
+    canActivate: [ AuthGuardService ]
   },
   {
     path: 'admin/about',
-    component: AdminAboutComponent
-    // canActivate: [ AuthGuardService ]
+    component: AdminAboutComponent,
+    canActivate: [ AuthGuardService ]
   }
 ];
 

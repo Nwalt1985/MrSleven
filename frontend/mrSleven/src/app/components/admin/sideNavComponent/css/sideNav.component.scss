@@ -27,18 +27,20 @@
       height: auto;
       width: auto;
     }
+    .logout:hover {
+      cursor: pointer;
+    }
 
 }
 
 @media only screen and (min-width: 1020px) {
   .sidenav-container {
     position: absolute;
-    top: 64px;
     bottom: 0;
     left: 0;
     right: 0;
     max-width: 100px;
-    height: 93%;
+    height: 100%;
     display: block;
     padding: 20px 0;
 

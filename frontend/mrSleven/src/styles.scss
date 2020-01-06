@@ -3,10 +3,6 @@ $background-color: #000000e6;
 $font-family: 'Permanent Marker', cursive;
 $font-color: #393939;
 
-html, body {
-  height: 100%;
-}
-
 .body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
@@ -19,6 +15,10 @@ html, body {
 .container {
   margin: 0 auto 5%;
   max-width: 90%;
+}
+
+.card {
+  background: #eee;
 }
 
 /* Navigation dropdown menu */

@@ -21,12 +21,18 @@
       </a>
     </mat-list-item>
 
-
     <mat-list-item class="nav-item">
       <a routerLink="/admin/contact" routerLinkActive="active" class="nav-link">
         <mat-icon color="warn" class="icon">email</mat-icon>
         <span>Contact</span>
       </a>
+    </mat-list-item>
+
+    <mat-list-item class="nav-item logout" (click)="auth.logout()">
+      <span class="nav-link">
+        <mat-icon color="warn" class="icon">block</mat-icon>
+        <span>Logout</span>
+      </span>
     </mat-list-item>
 
   </mat-list>

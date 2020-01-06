@@ -40,7 +40,7 @@ import { SocialComponent } from './components/public/socialComponent/social.comp
 import { GalleryComponent } from './components/public/galleryComponent/gallery.component';
 import { ContactFormComponent } from './components/public/contactFormComponent/contactForm.component';
 import { RegisterComponent } from './components/admin/adminUsers/registerUserComponent/register.component';
-import { SideNavigationComponent } from './components/admin/adminUsers/sideNavComponent/sideNav.component';
+import { SideNavigationComponent } from './components/admin/sideNavComponent/sideNav.component';
 import { UserLoggedInComponent } from './components/public/userLoggedInComponent/userLoggedIn.Component';
 import { DeleteUserComponent } from './components/admin/adminUsers/deleteUserComponent/delete.component';
 import { UpdatePasswordComponent } from './components/admin/adminUsers/updatePasswordComponent/updatePass.component';

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { AuthenticationService } from '../../../authentication.service';
 
 @Component({
   selector: 'app-side-nav-component',
@@ -9,4 +10,6 @@ import { Component } from '@angular/core';
 export class SideNavigationComponent {
   events: string[] = [];
   opened: boolean;
+
+  constructor(public auth: AuthenticationService) {}
 }
