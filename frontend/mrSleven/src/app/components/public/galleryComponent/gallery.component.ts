@@ -61,4 +61,12 @@ export class GalleryComponent implements OnInit {
   showMore() {
     this.galleryLimit = this.galleryLimit + 8;
   }
+
+  scrollToTop() {
+    window.scrollTo(0, 0);
+  }
+
+  resetGalleryLimit() {
+    this.galleryLimit = 8;
+  }
 }

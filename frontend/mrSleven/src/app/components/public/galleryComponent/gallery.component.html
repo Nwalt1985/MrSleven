@@ -10,8 +10,13 @@
     <img class="gallery-image" src="{{img.big}}" alt="gallery image">
   </div>
 </div>
+
 <div class="show-more">
   <button mat-fab>
     <mat-icon aria-hidden="false" aria-label="show more" (click)="showMore()">keyboard_arrow_down</mat-icon>
   </button>
+  <p class="scroll-to-top" *ngIf="galleryLimit > 16" (click)="scrollToTop()">Back to top
+    <span> / </span>
+    <span class="reset" (click)="resetGalleryLimit()">Reset</span>
+  </p>
 </div>
