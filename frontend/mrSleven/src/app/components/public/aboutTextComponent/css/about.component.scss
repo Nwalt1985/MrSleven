@@ -4,7 +4,9 @@
   }
   .about-me-mobile {
     margin-top: 15px;
-    box-shadow: 4px 4px 7px 1px #5b5b5b;
+    img {
+      box-shadow: 4px 4px 7px 1px #5b5b5b;
+    }
   }
   .about-content {
     text-align: center;
