@@ -24,13 +24,13 @@ mongoose.connect(process.env.MONGODB_URI, {
 
 const connection = mongoose.connection;
 
-/* 
-Require our custom routes
-*/
-const indexRouter = require('./routes/index');
-const aboutRouter = require('./routes/about');
-const adminRouter = require('./routes/admin');
-const contactRouter = require('./routes/contact');
+// Public Routes
+const indexRouter = require('./routes/public/index');
+const aboutRouter = require('./routes/public/about');
+const contactRouter = require('./routes/public/contact');
+
+// Admin routes
+const adminRouter = require('./routes/admin/admin');
 
 const app = express();
 
@@ -51,19 +51,18 @@ app.use(passport.initialize());
 // CONNECT TO ANGULAR FRONTEND
 app.use(express.static(path.join(__dirname, 'frontend/mrSleven/dist')));
 
-/*
-Public routes
-*/
+// Use Public Routes
 app.use('/', indexRouter);
 app.use('/about', aboutRouter);
-app.use('/admin', adminRouter);
 app.use('/contact', contactRouter);
 
-// // Catch all other routes and return the index file
+// Use Admin Routes
+app.use('/admin', adminRouter);
+
+// Catch all other routes and return the index file
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'frontend/mrSleven/dist/index.html'));
 });
-
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

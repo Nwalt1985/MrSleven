@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
-import { AuthenticationService } from '../../../authentication.service';
+import { AuthenticationService } from '../../../../authentication.service';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
-import { TokenPayload } from '../../../app-interfaces';
+import { TokenPayload } from '../../../../app-interfaces';
 
 @Component({
   selector: 'app-register-component',

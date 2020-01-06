@@ -1,5 +1,17 @@
-<div class="container gallery-container">
+<!-- Mobile & Tablet Gallery -->
+<div class="container gallery-container gallery-mobile">
   <ngx-gallery [options]="galleryOptions"
     [images]="galleryImages">
   </ngx-gallery>
+</div>
+
+<div class="container gallery-desktop">
+  <div *ngFor="let img of galleryImages.slice(0, galleryLimit)">
+    <img class="gallery-image" src="{{img.big}}" alt="gallery image">
+  </div>
+</div>
+<div class="show-more">
+  <button mat-fab>
+    <mat-icon aria-hidden="false" aria-label="show more" (click)="showMore()">keyboard_arrow_down</mat-icon>
+  </button>
 </div>

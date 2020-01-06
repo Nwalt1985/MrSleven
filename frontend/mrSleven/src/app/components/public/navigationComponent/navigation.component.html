@@ -1,37 +1,57 @@
 <mat-toolbar class="navigation">
+  <div class="logo-container">
+    <img class="logo" src="https://res.cloudinary.com/horx2w1dl/image/upload/a_180/v1578069196/images/EB803800-94BA-4195-A02D-02D83A821C0F_n6ipd3.png">
+  </div>
+
   <div class="nav">
-
-    <a class="nav-link" routerLink="#" routerLinkActive="active">
-      <span class="nav-header">Mr<span style="color:#ff00008f">.</span>Sleven</span>
-    </a>
-
-
     <!-- Mobile Navigation -->
     <div class="mobile-nav">
       <button mat-button [matMenuTriggerFor]="menu" class="nav-button">
         <mat-icon>menu</mat-icon>
       </button>
       <mat-menu #menu="matMenu" class="dropdown-menu">
+
         <a class="nav-link nav-link-mobile"
         routerLink="/about"
-        routerLinkActive="active">About</a>
+        routerLinkActive="active">
+          <img src="https://res.cloudinary.com/horx2w1dl/image/upload/c_scale,w_100/v1578070831/images/46B8CA43-7557-4EDC-9587-C26E37BBFB1F_u4yzjj.png"
+               alt="about page navigation link">
+        </a>
 
         <a class="nav-link nav-link-mobile"
         routerLink="/gallery"
-        routerLinkActive="active">Gallery</a>
+        routerLinkActive="active">
+          <img src="https://res.cloudinary.com/horx2w1dl/image/upload/c_scale,w_100/v1578070831/images/00440BA7-3E57-491F-8296-8A0A16F4FE1F_uapxga.png"
+               alt="gallery page navigation link">
+        </a>
+
+        <a class="nav-link nav-link-mobile"
+          href="#">
+          <img src="https://res.cloudinary.com/horx2w1dl/image/upload/c_scale,w_100/v1578072913/images/249142C4-273B-4196-820E-2E4E743A1BC6_jpvopk.png"
+               alt="shop page navigation link">
+        </a>
 
         <a class="nav-link nav-link-mobile"
         routerLink="/contact"
-        routerLinkActive="active">Contact</a>
+        routerLinkActive="active">
+          <img src="https://res.cloudinary.com/horx2w1dl/image/upload/c_scale,w_100/v1578070831/images/36633D09-C96D-4DE6-AFC0-E30BC8AF8B80_sv5sjr.png"
+               alt="contact page navigation link">
+        </a>
 
         <a class="nav-link nav-link-mobile"
         *ngIf="auth.isLoggedIn()"
         routerLink="/admin/home"
-        routerLinkActive="active">Admin</a>
+        routerLinkActive="active">
+          <img src="https://res.cloudinary.com/horx2w1dl/image/upload/c_scale,w_100/v1578072447/images/89C59847-2F85-48A2-AE69-45C4E0B4F6FC_iuw07p.png"
+               alt="admin page navigation link">
+        </a>
 
         <a class="nav-link nav-link-mobile"
         *ngIf="auth.isLoggedIn()"
-        (click)="auth.logout()">Logout</a>
+        (click)="auth.logout()">
+          <img src="https://res.cloudinary.com/horx2w1dl/image/upload/c_scale,w_100/v1578072587/images/9D726887-52F3-48DC-A02A-BD9BB9480B4E_ptyigu.png"
+               alt="logout page navigation link">
+        </a>
 
       </mat-menu>
     </div>
@@ -39,20 +59,43 @@
     <!-- Desktop Navigation -->
     <div class="desktop-nav">
       <span class="nav-links-group">
+
         <span class="nav-item">
-          <a class="nav-link" routerLink="/about" routerLinkActive="active">About</a>
+          <a class="nav-link" routerLink="/about" routerLinkActive="active">
+            <img src="https://res.cloudinary.com/horx2w1dl/image/upload/c_scale,w_100/v1578070831/images/46B8CA43-7557-4EDC-9587-C26E37BBFB1F_u4yzjj.png"
+                 alt="about page navigation link">
+          </a>
+        </span>
+
+        <span class="nav-item">
+          <a class="nav-link" routerLink="/gallery" routerLinkActive="active">
+            <img src="https://res.cloudinary.com/horx2w1dl/image/upload/c_scale,w_100/v1578070831/images/00440BA7-3E57-491F-8296-8A0A16F4FE1F_uapxga.png"
+                 alt="gallery page navigation link">
+          </a>
         </span>
         <span class="nav-item">
-          <a class="nav-link" routerLink="/gallery" routerLinkActive="active">Gallery</a>
+          <a class="nav-link" href="#">
+            <img src="https://res.cloudinary.com/horx2w1dl/image/upload/c_scale,w_100/v1578072913/images/249142C4-273B-4196-820E-2E4E743A1BC6_jpvopk.png"
+                 alt="shop page navigation link">
+          </a>
         </span>
         <span class="nav-item">
-          <a class="nav-link" routerLink="/contact" routerLinkActive="active">Contact</a>
+          <a class="nav-link" routerLink="/contact" routerLinkActive="active">
+            <img src="https://res.cloudinary.com/horx2w1dl/image/upload/c_scale,w_100/v1578070831/images/36633D09-C96D-4DE6-AFC0-E30BC8AF8B80_sv5sjr.png"
+                 alt="contact page navigation link">
+          </a>
         </span>
         <span class="nav-item" *ngIf="auth.isLoggedIn()">
-          <a class="nav-link" routerLink="/admin/home" routerLinkActive="active">Admin</a>
+          <a class="nav-link" routerLink="/admin/home" routerLinkActive="active">
+            <img src="https://res.cloudinary.com/horx2w1dl/image/upload/c_scale,w_100/v1578072447/images/89C59847-2F85-48A2-AE69-45C4E0B4F6FC_iuw07p.png"
+                 alt="admin page navigation link">
+          </a>
         </span>
         <span class="nav-item" *ngIf="auth.isLoggedIn()">
-          <a class="nav-link" (click)="auth.logout()">Logout</a>
+          <a class="nav-link" (click)="auth.logout()">
+            <img src="https://res.cloudinary.com/horx2w1dl/image/upload/c_scale,w_100/v1578072587/images/9D726887-52F3-48DC-A02A-BD9BB9480B4E_ptyigu.png"
+                 alt="logout navigation link">
+          </a>
         </span>
       </span>
     </div>

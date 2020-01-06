@@ -30,6 +30,7 @@ import { ContactPageComponent } from './pages/public/contactPage/contactPage.com
 /* Admin Pages */
 import { AdminHomePageComponent } from './pages/admin/adminHomePage/adminHomePage.component';
 import { AdminUserPageComponent } from './pages/admin/adminUserPage/adminUserPage.component';
+import { AdminAboutComponent } from './pages/admin/adminAboutPage/adminAbout.component';
 
 /* Components */
 import { LoginAppComponent } from './components/public/loginComponent/login.component';
@@ -38,11 +39,11 @@ import { AboutTextComponent } from './components/public/aboutTextComponent/about
 import { SocialComponent } from './components/public/socialComponent/social.component';
 import { GalleryComponent } from './components/public/galleryComponent/gallery.component';
 import { ContactFormComponent } from './components/public/contactFormComponent/contactForm.component';
-import { RegisterComponent } from './components/admin/registerUserComponent/register.component';
-import { SideNavigationComponent } from './components/admin/sideNavComponent/sideNav.component';
+import { RegisterComponent } from './components/admin/adminUsers/registerUserComponent/register.component';
+import { SideNavigationComponent } from './components/admin/adminUsers/sideNavComponent/sideNav.component';
 import { UserLoggedInComponent } from './components/public/userLoggedInComponent/userLoggedIn.Component';
-import { DeleteUserComponent } from './components/admin/deleteUserComponent/delete.component';
-import { UpdatePasswordComponent } from './components/admin/updatePasswordComponent/updatePass.component';
+import { DeleteUserComponent } from './components/admin/adminUsers/deleteUserComponent/delete.component';
+import { UpdatePasswordComponent } from './components/admin/adminUsers/updatePasswordComponent/updatePass.component';
 
 @NgModule({
   declarations: [
@@ -64,7 +65,8 @@ import { UpdatePasswordComponent } from './components/admin/updatePasswordCompon
     RegisterComponent,
     SideNavigationComponent,
     DeleteUserComponent,
-    UpdatePasswordComponent
+    UpdatePasswordComponent,
+    AdminAboutComponent
   ],
   imports: [
     BrowserModule,

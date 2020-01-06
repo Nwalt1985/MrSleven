@@ -1,3 +1,6 @@
+body {
+  background: #fff !important;
+}
 .video-wrapper {
   position: fixed;
   width: 100vw;
@@ -30,7 +33,7 @@
   }
 
   .link {
-    color: #FFF;
+    color: #393939;
     font-size: 2.2rem;
     text-decoration: none;
     font-family: 'Permanent Marker', cursive;

@@ -1,5 +1,3 @@
-const express = require("express");
-const passport = require('passport');
 const User = require('../models/user');
 
 module.exports.register = function(req, res) {

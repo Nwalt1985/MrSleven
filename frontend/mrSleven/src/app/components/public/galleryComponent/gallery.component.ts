@@ -16,6 +16,7 @@ export class GalleryComponent implements OnInit {
 
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
+  galleryLimit = 8;
 
   ngOnInit(): void {
 
@@ -23,7 +24,7 @@ export class GalleryComponent implements OnInit {
     this.galleryOptions = [
       {
         width: '100%',
-        height: '80vh',
+        height: '70vh',
         thumbnailsColumns: 4,
         imageAnimation: NgxGalleryAnimation.Slide
       },
@@ -44,33 +45,20 @@ export class GalleryComponent implements OnInit {
       }
     ];
 
+    this.galleryImages = [];
+
     /* Array of images objects to display */
-    this.galleryImages = [
-      {
+    for ( let i = 1; i <= 50; i++ ) {
+      this.galleryImages.push({
         small: 'https://loremflickr.com/1024/768',
         medium: 'https://loremflickr.com/1024/768',
         big: 'https://loremflickr.com/1024/768'
-      },
-      {
-        small: 'https://loremflickr.com/1024/768',
-        medium: 'https://loremflickr.com/1024/768',
-        big: 'https://loremflickr.com/1024/768'
-      },
-      {
-        small: 'https://loremflickr.com/1024/768',
-        medium: 'https://loremflickr.com/1024/768',
-        big: 'https://loremflickr.com/1024/768'
-      },
-      {
-        small: 'https://loremflickr.com/1024/768',
-        medium: 'https://loremflickr.com/1024/768',
-        big: 'https://loremflickr.com/1024/768'
-      },
-      {
-        small: 'https://loremflickr.com/1024/768',
-        medium: 'https://loremflickr.com/1024/768',
-        big: 'https://loremflickr.com/1024/768'
-      }
-    ];
+      });
+    }
+
+  }
+
+  showMore() {
+    this.galleryLimit = this.galleryLimit + 8;
   }
 }

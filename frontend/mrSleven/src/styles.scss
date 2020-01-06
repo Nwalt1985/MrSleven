@@ -1,41 +1,33 @@
 /* You can add global styles to this file, and also import other style files */
 $background-color: #000000e6;
 $font-family: 'Permanent Marker', cursive;
-$font-color: #DFDFDF;
+$font-color: #393939;
 
 html, body {
   height: 100%;
 }
-body {
+.body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
-  background-color: $background-color;
 }
 
 .header, p {
-  color: #DFDFDF;
+  color: $font-color;
 }
 
 .container {
-  margin: 0 auto 25%;
+  margin: 0 auto 5%;
   max-width: 90%;
 }
 
 /* Navigation dropdown menu */
 .dropdown-menu {
-  background: #000;
   text-align: center;
 
   .nav-link-mobile {
-    color: $font-color;
     display: block;
-    text-decoration: none;
-    font-family: $font-family;
-    font-size: 1.2rem;
-    padding: 10px 20px;
-    &:not(:last-child) {
-      border-bottom: 1px solid #ff00008f;
-    }
+    margin: 5px;
+    padding: 0 20px;
   }
 }
 
@@ -53,6 +45,6 @@ body {
 @media only screen and (min-width: 1020px) {
   .container {
     max-width: 80%;
-    margin: 0 auto 8%;
+    margin: 0 auto;
   }
 }

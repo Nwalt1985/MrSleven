@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthenticationService } from '../../../authentication.service';
+import { AuthenticationService } from '../../../../authentication.service';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
-import { TokenPayloadUser } from '../../../app-interfaces';
+import { TokenPayloadUser } from '../../../../app-interfaces';
 
 @Component({
   selector: 'app-delete-component',

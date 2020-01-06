@@ -11,6 +11,7 @@ import { ContactPageComponent } from './pages/public/contactPage/contactPage.com
 /* Admin Components */
 import { AdminHomePageComponent } from './pages/admin/adminHomePage/adminHomePage.component';
 import { AdminUserPageComponent } from './pages/admin/adminUserPage/adminUserPage.component';
+import { AdminAboutComponent } from './pages/admin/adminAboutPage/adminAbout.component';
 
 /* Authentication for admin pages */
 import { AuthGuardService } from './auth-guard.service';
@@ -43,8 +44,13 @@ const routes: Routes = [
   },
   {
     path: 'admin/user',
-    component: AdminUserPageComponent,
-    canActivate: [ AuthGuardService ]
+    component: AdminUserPageComponent
+    // canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'admin/about',
+    component: AdminAboutComponent
+    // canActivate: [ AuthGuardService ]
   }
 ];
 
