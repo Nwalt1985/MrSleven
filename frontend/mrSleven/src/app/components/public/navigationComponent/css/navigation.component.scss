@@ -13,18 +13,13 @@
 
     .logo {
       width: 100%;
+      box-shadow: none;
     }
   }
 
+
   .desktop-nav {
     display: none;
-  }
-
-  .nav-title, .nav-link, .nav-button {
-    color: #393939;
-    text-decoration: none;
-    font-size: 1.6rem;
-    letter-spacing: 3px;
   }
 
   .nav-button {

@@ -1,8 +1,5 @@
 .social-media-group {
   background-color: transparent;
-  position: static;
-  bottom: 0;
-  left: 0;
 
   .icon-group {
     margin: 0 auto;
@@ -14,8 +11,4 @@
 }
 
 /* TABLET STYLING */
-@media only screen and (min-width: 760px) {
-  // .social-media-group {
-  //   position: fixed;
-  // }
-}
+@media only screen and (min-width: 760px) {}
