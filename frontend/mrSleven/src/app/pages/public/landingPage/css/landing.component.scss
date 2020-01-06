@@ -1,41 +1,27 @@
-body {
-  background: #fff !important;
-}
-.video-wrapper {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  bottom: 0;
-  right: 0;
-}
-
-// .overlay {
-//     height: 100%;
-//     width: 100%;
-//     position: absolute;
-//     top: 0px;
-//     left: 0px;
-//     z-index: 2;
-//     background: #153f4d;
-//     opacity: 0.5;
-// }
-
 .homepage-content {
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 2;
   text-align: center;
+  width: 360px;
+  height: auto;
 
   .logo {
     width: 100%;
   }
 
   .link {
-    color: #393939;
+    color: #333;
     font-size: 2.2rem;
     text-decoration: none;
     font-family: 'Permanent Marker', cursive;
   }
 }
+
+@media only screen and (min-width: 760px) {
+  .homepage-content {
+    width: auto;
+  }
+}
+
