@@ -15,10 +15,12 @@ export class UserLoggedInComponent implements OnInit {
   constructor(public auth: AuthenticationService) { }
 
   ngOnInit() {
-    this.auth.profile().subscribe(user => {
-      this.details = user;
-    }, (err) => {
-      console.error(err);
-    });
+    if ( this.auth.isLoggedIn() ) {
+      this.auth.profile().subscribe(user => {
+        this.details = user;
+      }, (err) => {
+        console.error(err);
+      });
+    }
   }
 }

@@ -17,10 +17,6 @@
     }
   }
 
-  .nav-link img {
-    max-width: 100px;
-  }
-
   .desktop-nav {
     display: none;
   }
@@ -38,8 +34,13 @@
   .mobile-nav {
     float: right;
   }
-
 }
+
+.nav-image {
+  max-width: 100px;
+}
+
+
 
 /* TABLET STYLING */
 @media only screen and (min-width: 760px) {
@@ -75,6 +76,9 @@
 
       .nav-link {
         padding: 0 10px;
+          img {
+            max-width: 100px;
+          }
       }
     }
   }

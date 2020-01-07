@@ -7,6 +7,7 @@ const path            = require('path');
 const bodyParser      = require('body-parser');
 const mongoose        = require('mongoose');
 const passport        = require('passport');
+const cloudinary      = require('cloudinary');
 
 /* 
   Require Passport config
@@ -24,10 +25,18 @@ mongoose.connect(process.env.MONGODB_URI, {
 
 const connection = mongoose.connection;
 
+// Cloudinary API config
+cloudinary.config({
+  cloud_name: process.env.CLOUDINARY_NAME,
+  api_key: process.env.CLOUDINARY_KEY,
+  api_secret: process.env.CLOUDINARY_SECRET
+});
+
 // Public Routes
 const indexRouter = require('./routes/public/index');
 const aboutRouter = require('./routes/public/about');
 const contactRouter = require('./routes/public/contact');
+const navContentRouter = require('./routes/public/nav-content');
 
 // Admin routes
 const adminRouter = require('./routes/admin/admin');
@@ -55,6 +64,7 @@ app.use(express.static(path.join(__dirname, 'frontend/mrSleven/dist')));
 app.use('/', indexRouter);
 app.use('/about', aboutRouter);
 app.use('/contact', contactRouter);
+app.use('/nav', navContentRouter);
 
 // Use Admin Routes
 app.use('/admin', adminRouter);

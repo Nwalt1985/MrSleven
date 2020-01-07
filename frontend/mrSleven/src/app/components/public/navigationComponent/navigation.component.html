@@ -11,47 +11,31 @@
       </button>
       <mat-menu #menu="matMenu" class="dropdown-menu">
 
-        <a class="nav-link nav-link-mobile"
-           routerLink="/about"
-           routerLinkActive="active">
-          <img src="https://res.cloudinary.com/horx2w1dl/image/upload/v1578070831/images/Navigation/about.png"
-               alt="about page navigation link">
-        </a>
+        <div class="nav-item" *ngFor="let link of navContent">
 
-        <a class="nav-link nav-link-mobile"
-           routerLink="/gallery"
-           routerLinkActive="active">
-          <img src="https://res.cloudinary.com/horx2w1dl/image/upload/v1578070831/images/Navigation/gallery.png"
-               alt="gallery page navigation link">
-        </a>
+          <a class="nav-link-mobile"
+              routerLink="{{link.context.custom.href}}"
+              routerLinkActive="active"
+              *ngIf="link.context.custom.is_admin === 'false'">
 
-        <a class="nav-link nav-link-mobile"
-          href="#">
-          <img src="https://res.cloudinary.com/horx2w1dl/image/upload/v1578072913/images/Navigation/shop.png"
-               alt="shop page navigation link">
-        </a>
+            <img class="nav-image" src="{{link.secure_url}}" alt="{{link.context.custom.alt}}">
+          </a>
+        </div>
 
-        <a class="nav-link nav-link-mobile"
-           routerLink="/contact"
-           routerLinkActive="active">
-          <img src="https://res.cloudinary.com/horx2w1dl/image/upload/v1578070831/images/Navigation/contact.png"
-               alt="contact page navigation link">
-        </a>
+        <a class="nav-link-mobile"
+            *ngIf="auth.isLoggedIn()"
+            routerLink="/admin/home"
+            routerLinkActive="active">
+            <img src="https://res.cloudinary.com/horx2w1dl/image/upload/v1578072447/images/Navigation/admin.png"
+                alt="admin page navigation link">
+          </a>
 
-        <a class="nav-link nav-link-mobile"
-           *ngIf="auth.isLoggedIn()"
-           routerLink="/admin/home"
-           routerLinkActive="active">
-          <img src="https://res.cloudinary.com/horx2w1dl/image/upload/v1578072447/images/Navigation/admin.png"
-               alt="admin page navigation link">
-        </a>
-
-        <a class="nav-link nav-link-mobile"
-           *ngIf="auth.isLoggedIn()"
-           (click)="auth.logout()">
-          <img src="https://res.cloudinary.com/horx2w1dl/image/upload/v1578072587/images/Navigation/logout.png"
-               alt="logout page navigation link">
-        </a>
+          <a class="nav-link-mobile"
+            *ngIf="auth.isLoggedIn()"
+            (click)="auth.logout()">
+            <img src="https://res.cloudinary.com/horx2w1dl/image/upload/v1578072587/images/Navigation/logout.png"
+                alt="logout page navigation link">
+          </a>
 
       </mat-menu>
     </div>
@@ -60,31 +44,16 @@
     <div class="desktop-nav">
       <span class="nav-links-group">
 
-        <span class="nav-item">
-          <a class="nav-link" routerLink="/about" routerLinkActive="active">
-            <img src="https://res.cloudinary.com/horx2w1dl/image/upload/v1578070831/images/Navigation/about.png"
-                 alt="about page navigation link">
+        <span class="nav-item" *ngFor="let link of navContent">
+          <a class="nav-link"
+             *ngIf="link.context.custom.is_admin === 'false'"
+             routerLink="{{link.context.custom.href}}"
+             routerLinkActive="active">
+            <img src="{{link.secure_url}}"
+                 alt="{{link.context.custom.alt}}">
           </a>
         </span>
 
-        <span class="nav-item">
-          <a class="nav-link" routerLink="/gallery" routerLinkActive="active">
-            <img src="https://res.cloudinary.com/horx2w1dl/image/upload/v1578070831/images/Navigation/gallery.png"
-                 alt="gallery page navigation link">
-          </a>
-        </span>
-        <span class="nav-item">
-          <a class="nav-link" href="#">
-            <img src="https://res.cloudinary.com/horx2w1dl/image/upload/v1578072913/images/Navigation/shop.png"
-                 alt="shop page navigation link">
-          </a>
-        </span>
-        <span class="nav-item">
-          <a class="nav-link" routerLink="/contact" routerLinkActive="active">
-            <img src="https://res.cloudinary.com/horx2w1dl/image/upload/v1578070831/images/Navigation/contact.png"
-                 alt="contact page navigation link">
-          </a>
-        </span>
         <span class="nav-item" *ngIf="auth.isLoggedIn()">
           <a class="nav-link" routerLink="/admin/home" routerLinkActive="active">
             <img src="https://res.cloudinary.com/horx2w1dl/image/upload/v1578072447/images/Navigation/admin.png"
