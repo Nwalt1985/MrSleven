@@ -9,6 +9,8 @@ import { AuthenticationService } from '../../../authentication.service';
 
 export class AdminAboutComponent {
 
+  title = 'About Page Control';
+
   constructor(private auth: AuthenticationService) { }
 
 }

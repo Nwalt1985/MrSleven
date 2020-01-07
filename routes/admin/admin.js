@@ -40,7 +40,7 @@ router.post('/auth/delete', auth, ( req, res, next ) => { adminUserApi.deleteUse
 
 /* ABOUT PAGE CONTROL */
 // About Header
-router.post('/auth/about-header', auth, (req, res, next) => { aboutApi.aboutHeader(req, res) });
+router.post('/auth/update-about-header', auth, (req, res, next) => { aboutApi.updateAboutHeader(req, res) });
 
 
 module.exports = router;

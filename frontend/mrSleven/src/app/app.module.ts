@@ -44,6 +44,7 @@ import { SideNavigationComponent } from './components/admin/sideNavComponent/sid
 import { UserLoggedInComponent } from './components/public/userLoggedInComponent/userLoggedIn.Component';
 import { DeleteUserComponent } from './components/admin/adminUsers/deleteUserComponent/delete.component';
 import { UpdatePasswordComponent } from './components/admin/adminUsers/updatePasswordComponent/updatePass.component';
+import { AdminAboutHeaderComponent } from './components/admin/adminAbout/aboutHeader/aboutHeader.component';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { UpdatePasswordComponent } from './components/admin/adminUsers/updatePas
     SideNavigationComponent,
     DeleteUserComponent,
     UpdatePasswordComponent,
-    AdminAboutComponent
+    AdminAboutComponent,
+    AdminAboutHeaderComponent
   ],
   imports: [
     BrowserModule,

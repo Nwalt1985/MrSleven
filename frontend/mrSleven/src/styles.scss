@@ -21,6 +21,23 @@ $font-color: #393939;
   background: #eee;
 }
 
+.form-container > * {
+  width: 100%;
+}
+
+.card-action {
+  margin-left: 0
+}
+
+.form-container {
+  padding: 0 15px;
+}
+
+.form-container > * {
+  width: 100%;
+}
+
+
 /* Navigation dropdown menu */
 .dropdown-menu {
   text-align: center;

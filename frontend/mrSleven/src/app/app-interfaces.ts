@@ -25,3 +25,8 @@ export interface TokenPayloadUpdatePass {
   username: string;
   newPassword: string;
 }
+
+export interface TokenPayloadABoutHeader {
+  header: string;
+  current: string;
+}

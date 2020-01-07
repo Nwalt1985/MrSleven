@@ -8,7 +8,8 @@ import { UserDetails,
          TokenResponse,
          TokenPayload,
          TokenPayloadUser,
-         TokenPayloadUpdatePass } from './app-interfaces';
+         TokenPayloadUpdatePass,
+         TokenPayloadABoutHeader } from './app-interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -83,8 +84,9 @@ export class AuthenticationService {
   */
   private request(
     method: 'post' | 'get',
-    type: 'login' | 'register' | 'profile' | 'delete' | 'get-users' | 'update-pass',
-    dataPayload?: TokenPayload | TokenPayloadUser | TokenPayloadUpdatePass,
+    type: 'login' | 'register' | 'profile' | 'delete' | 'get-users' | 'update-pass'
+    | 'update-about-header',
+    dataPayload?: TokenPayload | TokenPayloadUser | TokenPayloadUpdatePass | TokenPayloadABoutHeader,
     params?: string
   ): Observable<any> {
     let base;
@@ -93,17 +95,14 @@ export class AuthenticationService {
 
       base = this.http.post(`admin/auth/${type}`, dataPayload, {
         headers: {
-          Authorization: `Bearer ${this.getToken()}`,
+          Authorization: `Bearer ${this.getToken()}`
         }
       });
 
     } else {
       base = this.http.get(`admin/auth/${type}`, {
         headers: {
-          Authorization: `Bearer ${this.getToken()}`,
-        },
-        params : {
-          data: params
+          Authorization: `Bearer ${this.getToken()}`
         }
       });
     }
@@ -147,6 +146,10 @@ export class AuthenticationService {
 
   public updatePass(user: TokenPayloadUpdatePass): Observable<any> {
     return this.request('post', 'update-pass', user);
+  }
+
+  public updateAboutHeader(about: TokenPayloadABoutHeader): Observable<any> {
+    return this.request('post', 'update-about-header', about);
   }
 
 

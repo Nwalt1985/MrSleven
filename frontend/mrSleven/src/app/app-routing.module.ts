@@ -40,17 +40,17 @@ const routes: Routes = [
   {
     path: 'admin/home',
     component: AdminHomePageComponent,
-    canActivate: [ AuthGuardService ]
+    // canActivate: [ AuthGuardService ]
   },
   {
     path: 'admin/user',
     component: AdminUserPageComponent,
-    canActivate: [ AuthGuardService ]
+    // canActivate: [ AuthGuardService ]
   },
   {
     path: 'admin/about',
     component: AdminAboutComponent,
-    canActivate: [ AuthGuardService ]
+    // canActivate: [ AuthGuardService ]
   }
 ];
 

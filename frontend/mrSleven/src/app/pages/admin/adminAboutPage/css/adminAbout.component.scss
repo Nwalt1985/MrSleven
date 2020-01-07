@@ -1,0 +1,11 @@
+.top-group {
+  text-align: center;
+    .go-to-page span {
+      display: block;
+    }
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    grid-gap: 1rem;
+}
