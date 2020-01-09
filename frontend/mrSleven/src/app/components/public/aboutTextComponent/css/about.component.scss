@@ -6,10 +6,15 @@
     margin-top: 15px;
     img {
       box-shadow: 4px 4px 7px 1px #5b5b5b;
+      max-width: 300px;
+      margin: 10px;
     }
   }
   .about-content {
     text-align: center;
+  }
+  .about-header-image {
+    max-width: 200px;
   }
 }
 
@@ -39,8 +44,6 @@
   .signature {
     text-align: center;
     margin: 20px 0;
-    // position: relative;
-    // top: 10%;
   }
 
 }

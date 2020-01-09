@@ -27,6 +27,7 @@ export interface TokenPayloadUpdatePass {
 }
 
 export interface TokenPayloadABoutHeader {
+  id: string;
   header: string;
-  current: string;
+  url: string;
 }

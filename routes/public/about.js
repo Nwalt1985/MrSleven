@@ -9,7 +9,7 @@ router.get("/content", (req, res, next) => {
   /* Get Content  */
   try {
     
-    About.find({},{_id:0}, (err, result) => {
+    About.find({}, (err, result) => {
       res.json(result);
     })
     

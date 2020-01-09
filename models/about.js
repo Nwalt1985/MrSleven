@@ -4,9 +4,11 @@ var mongoose = require('mongoose');
 // define the schema for our user model
 var aboutSchema = mongoose.Schema({
     header: String,
+    headerUrl: String,
     content: String,
     bottomContent: String,
     images: Array,
+    signature: Object,
     date: { type: Date, default: Date.now },
 });
 

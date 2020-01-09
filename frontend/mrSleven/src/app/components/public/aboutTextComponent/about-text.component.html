@@ -1,29 +1,31 @@
-<div class="container" *ngFor="let index of aboutContent">
+<div class="container" *ngFor="let content of aboutContent">
   <div class="content">
 
     <div class="about-image">
-      <img src="https://res.cloudinary.com/horx2w1dl/image/upload/v1578064373/images/A9FB21C1-15C1-466E-BC08-A9E85DCEFD6C_hcwvrn.jpg" alt="">
+      <img src="{{content.images[0].src}}" alt="{{content.images[0].alt}}">
     </div>
 
     <div class="about-content">
 
       <div class="about-me-mobile">
-        <img src="https://res.cloudinary.com/horx2w1dl/image/upload/c_scale,w_276/v1578076339/images/Slevenpaintspray_ti21of.jpg"
-              alt="about me image">
+        <img src="{{content.images[2].src}}" alt="{{content.images[2].alt}}">
       </div>
 
-      <h1 class="about-header header">{{index.header}}</h1>
+      <div class="header">
+        <h1 class="about-header header" *ngIf="content.header.length > 0">{{content.header}}</h1>
+        <img class="about-header-image" *ngIf="content.headerUrl.length > 0" src="{{content.headerUrl}}" alt="About header image">
+      </div>
 
-      <div [innerHTML]="index.content" class="about-text"></div>
+      <div [innerHTML]="content.content" class="about-text"></div>
 
       <div class="signature">
-        <img src="https://res.cloudinary.com/horx2w1dl/image/upload/c_scale,w_338/v1578073028/images/2E37EC98-2939-405B-9EFB-CC6D10F65F44_unmwi4.png" alt="Mr.Sleven's Signature">
+        <img src="{{content.signature.src}}" alt="{{content.signature.alt}}">
       </div>
 
     </div>
 
     <div class="about-image-second">
-      <img src="https://res.cloudinary.com/horx2w1dl/image/upload/c_scale,e_blackwhite,w_546/v1578064373/images/About/A9FB21C1-15C1-466E-BC08-A9E85DCEFD6C_hcwvrn.jpg" alt="">
+      <img src="{{content.images[1].src}}" alt="{{content.images[1].alt}}">
     </div>
 
   </div>

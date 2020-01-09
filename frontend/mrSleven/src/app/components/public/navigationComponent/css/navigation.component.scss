@@ -6,15 +6,10 @@
   grid-template-columns: 1fr 1fr;
   height: auto;
 
-  .logo-container {
-    max-width: 70%;
-    display: inline-block;
+  .logo {
+    max-width: 120px;
+    box-shadow: none;
     margin-top: 10px;
-
-    .logo {
-      width: 100%;
-      box-shadow: none;
-    }
   }
 
   .desktop-nav {
@@ -59,15 +54,16 @@
 @media only screen and (min-width: 1020px) {
 
   .body .navigation {
-    padding: 10px 0px 10px 20px;
+    padding: 10px 0px 10px 30px;
     background: transparent;
-
-    .logo-container {
-      width: 23%;
-    }
+    box-shadow: 0px 0px 7px 1px #5b5b5b;
 
     .mobile-nav {
       display: none;
+    }
+
+    .logo {
+      margin-top: 0;
     }
 
     .desktop-nav {
@@ -75,9 +71,10 @@
       float: right;
 
       .nav-link {
-        padding: 0 10px;
+        margin-left: 20px;
           img {
             max-width: 100px;
+            padding-top: 10px;
           }
       }
     }

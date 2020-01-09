@@ -16,21 +16,27 @@ export class AdminAboutHeaderComponent implements OnInit {
     constructor(private auth: AuthenticationService,
                 public aboutService: AboutTextService ) {}
 
+    aboutID = '';
+
     aboutHeaderText: TokenPayloadABoutHeader = {
+      id: '',
       header: '',
-      current: ''
+      url: ''
     };
 
     ngOnInit() {
       // Get about page content to populate form
       this.aboutService.getAboutTextContent().subscribe(( result: object ) => {
-        this.aboutHeaderText.current = result[0].header;
+        this.aboutID = result[0]._id;
+        this.aboutHeaderText.header = result[0].header;
       });
     }
 
     updateHeader( form: NgForm ) {
-
+      // Get ID and form values to be updated
+      this.aboutHeaderText.id = this.aboutID;
       this.aboutHeaderText.header = form.value.aboutHeader;
+      this.aboutHeaderText.url = form.value.aboutHeaderUrl;
 
       this.auth.updateAboutHeader( this.aboutHeaderText )
         .subscribe(
