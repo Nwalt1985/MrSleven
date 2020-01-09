@@ -29,6 +29,7 @@ export class AdminAboutHeaderComponent implements OnInit {
       this.aboutService.getAboutTextContent().subscribe(( result: object ) => {
         this.aboutID = result[0]._id;
         this.aboutHeaderText.header = result[0].header;
+        this.aboutHeaderText.url = result[0].header;
       });
     }
 
