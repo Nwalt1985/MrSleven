@@ -1,0 +1,43 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>
+      Signature Control
+    </mat-card-title>
+  </mat-card-header>
+
+  <img mat-card-image src="{{aboutSignature.signature?.src}}" alt="{{aboutSignature.signature?.alt}}">
+
+  <mat-card-content>
+    <form (submit)="updateSignature( updateSignatureForm )" #updateSignatureForm="ngForm">
+      <div class="form-container">
+        <mat-form-field>
+          <mat-label>Image URL</mat-label>
+          <input matInput
+                 type="text"
+                 name="signatureUrl"
+                 #aboutHeaderUrl="ngModel"
+                 value="{{aboutSignature.signature?.src}}"
+                 ngModel>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Image Description</mat-label>
+          <input matInput
+                 type="text"
+                 name="signatureAlt"
+                 #aboutHeaderUrl="ngModel"
+                 value="{{aboutSignature.signature?.alt}}"
+                 ngModel>
+        </mat-form-field>
+
+        <mat-card-actions class="card-action">
+          <button mat-raised-button
+                  type="submit"
+                  class="btn btn-default"
+                  color="primary">Update
+          </button>
+        </mat-card-actions>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

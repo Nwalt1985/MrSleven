@@ -26,7 +26,7 @@ export class AdminAboutHeaderComponent implements OnInit {
 
     ngOnInit() {
       // Get about page content to populate form
-      this.aboutService.getAboutTextContent().subscribe(( result: object ) => {
+      this.aboutService.getAboutContent().subscribe(( result: object ) => {
         this.aboutID = result[0]._id;
         this.aboutHeaderText.header = result[0].header;
         this.aboutHeaderText.url = result[0].headerUrl;

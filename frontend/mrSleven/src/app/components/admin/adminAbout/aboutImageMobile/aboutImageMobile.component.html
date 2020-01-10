@@ -1,0 +1,43 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>
+      Image Control (Mobile)
+    </mat-card-title>
+  </mat-card-header>
+
+  <img mat-card-image src="{{aboutImages.images[2]?.src}}" alt="{{aboutImages.images[2]?.alt}}">
+
+  <mat-card-content>
+    <form (submit)="updateImage( updateImageForm )" #updateImageForm="ngForm">
+      <div class="form-container">
+        <mat-form-field>
+          <mat-label>Image URL</mat-label>
+          <input matInput
+                type="text"
+                name="imageMobileUrl"
+                value="{{aboutImages.images[2]?.src}}"
+                #aboutHeaderInput="ngModel"
+                ngModel>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Image Description</mat-label>
+          <input matInput
+                type="text"
+                name="imageMobileAlt"
+                value="{{aboutImages.images[2]?.alt}}"
+                #aboutHeaderInput="ngModel"
+                ngModel>
+        </mat-form-field>
+
+        <mat-card-actions class="card-action">
+          <button mat-raised-button
+                  type="submit"
+                  class="btn btn-default"
+                  color="primary">Update
+          </button>
+        </mat-card-actions>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

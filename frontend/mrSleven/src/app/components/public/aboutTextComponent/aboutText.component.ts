@@ -18,7 +18,7 @@ export class AboutTextComponent implements OnInit {
 
   /* On component init call the service to fetch component content */
   ngOnInit() {
-    this.aboutService.getAboutTextContent().subscribe(( result: object ) => {
+    this.aboutService.getAboutContent().subscribe(( result: object ) => {
 
       // Crate a new arry with result data
       this.aboutContent = result;

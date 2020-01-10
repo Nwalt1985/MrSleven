@@ -19,6 +19,7 @@ $font-color: #393939;
 
 .card {
   background: #eee;
+  margin-bottom: 1rem;
 }
 
 .form-container > * {
@@ -60,9 +61,26 @@ $font-color: #393939;
   }
 }
 
+.grid-container {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: 1fr;
+
+}
+@media only screen and (min-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media only screen and (min-width: 1200px) {
+  .grid-container {
+    grid-template-columns: repeat(4, 2fr);
+  }
+}
+
 @media only screen and (min-width: 1020px) {
   .container {
     max-width: 80%;
-    margin: 3% auto 0;
+    margin: 1% auto 0;
   }
 }

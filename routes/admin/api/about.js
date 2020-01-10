@@ -14,3 +14,25 @@ module.exports.updateAboutHeader = function(req, res) {
         console.error(err);
     } 
 }
+
+module.exports.updateAboutImage = function(req, res) {
+    try {
+        About.updateOne({ _id : req.body.id },{ $set: { images: req.body.images }})
+            .exec(function (err, result) {
+                if (!err) res.status(200).json({ 'success': 'Image Updated' });
+            });
+    } catch(err) {
+        console.error(err);
+    } 
+}
+
+module.exports.updateAboutSignature = function(req, res) {
+    try {
+        About.updateOne({ _id : req.body.id },{ $set: { signature: req.body.signature }})
+            .exec(function (err, result) {
+                if (!err) res.status(200).json({ 'success': 'Signature Updated' });
+            });
+    } catch(err) {
+        console.error(err);
+    } 
+}

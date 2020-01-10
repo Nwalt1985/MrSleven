@@ -7,7 +7,7 @@ export class AboutTextService {
 
   constructor(private http: HttpClient) { }
 
-  getAboutTextContent() {
+  getAboutContent() {
     return this.http.get('/about/content');
   }
 

@@ -31,3 +31,16 @@ export interface TokenPayloadABoutHeader {
   header: string;
   url: string;
 }
+
+export interface TokenPayloadABoutImages {
+  id: string;
+  images: Array<any>;
+}
+
+export interface TokenPayloadABoutSignature {
+  id: string;
+  signature: {
+    src: string;
+    alt: string;
+  };
+}

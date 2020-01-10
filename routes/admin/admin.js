@@ -42,5 +42,10 @@ router.post('/auth/delete', auth, ( req, res, next ) => { adminUserApi.deleteUse
 // About Header
 router.post('/auth/update-about-header', auth, (req, res, next) => { aboutApi.updateAboutHeader(req, res) });
 
+// About Images
+router.post('/auth/update-about-image', auth, (req, res, next) => { aboutApi.updateAboutImage(req, res) });
+
+// About Signature
+router.post('/auth/update-about-signature', auth, (req, res, next) => { aboutApi.updateAboutSignature(req, res) });
 
 module.exports = router;

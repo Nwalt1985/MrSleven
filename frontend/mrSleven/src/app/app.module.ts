@@ -45,6 +45,10 @@ import { UserLoggedInComponent } from './components/public/userLoggedInComponent
 import { DeleteUserComponent } from './components/admin/adminUsers/deleteUserComponent/delete.component';
 import { UpdatePasswordComponent } from './components/admin/adminUsers/updatePasswordComponent/updatePass.component';
 import { AdminAboutHeaderComponent } from './components/admin/adminAbout/aboutHeader/aboutHeader.component';
+import { AdminAboutImageLeftComponent } from './components/admin/adminAbout/aboutImageLeft/aboutImageLeft.component';
+import { AdminAboutImageRightComponent } from './components/admin/adminAbout/aboutImageRight/aboutImageRight.component';
+import { AdminAboutImageMobileComponent } from './components/admin/adminAbout/aboutImageMobile/aboutImageMobile.component';
+import { AdminAboutSignatureComponent } from './components/admin/adminAbout/aboutSignature/aboutSignature.component';
 
 @NgModule({
   declarations: [
@@ -68,7 +72,11 @@ import { AdminAboutHeaderComponent } from './components/admin/adminAbout/aboutHe
     DeleteUserComponent,
     UpdatePasswordComponent,
     AdminAboutComponent,
-    AdminAboutHeaderComponent
+    AdminAboutHeaderComponent,
+    AdminAboutImageLeftComponent,
+    AdminAboutImageRightComponent,
+    AdminAboutImageMobileComponent,
+    AdminAboutSignatureComponent
   ],
   imports: [
     BrowserModule,
