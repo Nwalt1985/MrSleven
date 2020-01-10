@@ -36,3 +36,14 @@ module.exports.updateAboutSignature = function(req, res) {
         console.error(err);
     } 
 }
+
+module.exports.updateAboutContent = function(req, res) {
+    try {
+        About.updateOne({ _id : req.body.id },{ $set: { content: req.body.content }})
+            .exec(function (err, result) {
+                if (!err) res.status(200).json({ 'success': 'About text updated' });
+            });
+    } catch(err) {
+        console.error(err);
+    } 
+}

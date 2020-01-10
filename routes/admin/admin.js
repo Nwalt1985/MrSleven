@@ -48,4 +48,7 @@ router.post('/auth/update-about-image', auth, (req, res, next) => { aboutApi.upd
 // About Signature
 router.post('/auth/update-about-signature', auth, (req, res, next) => { aboutApi.updateAboutSignature(req, res) });
 
+// About Signature
+router.post('/auth/update-about-content', auth, (req, res, next) => { aboutApi.updateAboutContent(req, res) });
+
 module.exports = router;

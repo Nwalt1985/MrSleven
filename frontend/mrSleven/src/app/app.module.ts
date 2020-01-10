@@ -49,6 +49,7 @@ import { AdminAboutImageLeftComponent } from './components/admin/adminAbout/abou
 import { AdminAboutImageRightComponent } from './components/admin/adminAbout/aboutImageRight/aboutImageRight.component';
 import { AdminAboutImageMobileComponent } from './components/admin/adminAbout/aboutImageMobile/aboutImageMobile.component';
 import { AdminAboutSignatureComponent } from './components/admin/adminAbout/aboutSignature/aboutSignature.component';
+import { AdminAboutTextComponent } from './components/admin/adminAbout/aboutText/aboutText.component';
 
 @NgModule({
   declarations: [
@@ -76,7 +77,8 @@ import { AdminAboutSignatureComponent } from './components/admin/adminAbout/abou
     AdminAboutImageLeftComponent,
     AdminAboutImageRightComponent,
     AdminAboutImageMobileComponent,
-    AdminAboutSignatureComponent
+    AdminAboutSignatureComponent,
+    AdminAboutTextComponent
   ],
   imports: [
     BrowserModule,

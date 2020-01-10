@@ -44,3 +44,8 @@ export interface TokenPayloadABoutSignature {
     alt: string;
   };
 }
+
+export interface TokenPayloadAboutText {
+  id: string;
+  content: string;
+}

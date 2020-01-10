@@ -11,7 +11,8 @@ import { UserDetails,
          TokenPayloadUpdatePass,
          TokenPayloadABoutHeader,
          TokenPayloadABoutImages,
-         TokenPayloadABoutSignature } from './app-interfaces';
+         TokenPayloadABoutSignature,
+         TokenPayloadAboutText } from './app-interfaces';
 
 @Injectable({
   providedIn: 'root'
@@ -87,9 +88,11 @@ export class AuthenticationService {
   private request(
     method: 'post' | 'get',
     type: 'login' | 'register' | 'profile' | 'delete' | 'get-users' | 'update-pass'
-      | 'update-about-header' | 'update-about-image' | 'update-about-signature',
+      | 'update-about-header' | 'update-about-image' | 'update-about-signature'
+      | 'update-about-content',
     dataPayload?: TokenPayload | TokenPayloadUser | TokenPayloadUpdatePass
-      | TokenPayloadABoutHeader | TokenPayloadABoutImages | TokenPayloadABoutSignature,
+      | TokenPayloadABoutHeader | TokenPayloadABoutImages | TokenPayloadABoutSignature
+      | TokenPayloadAboutText,
     params?: string
   ): Observable<any> {
     let base;
@@ -161,6 +164,10 @@ export class AuthenticationService {
 
   public updateAboutSignature(image: TokenPayloadABoutSignature ): Observable<any> {
     return this.request('post', 'update-about-signature', image);
+  }
+
+  public updateAboutText(content: TokenPayloadAboutText ): Observable<any> {
+    return this.request('post', 'update-about-content', content);
   }
 
 

@@ -1,0 +1,34 @@
+<mat-card class="card">
+  <mat-card-header>
+    <mat-card-title>
+      Update About Text
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+
+    <form (submit)="updateAboutText( updateAboutContent )" #updateAboutContent="ngForm">
+      <div class="form-container">
+        <mat-form-field>
+          <mat-label>About Text (HTML)</mat-label>
+          <textarea matInput
+                 type="text"
+                 name="aboutContent"
+                 value="{{aboutContent.content}}"
+                 #aboutHeaderInput="ngModel"
+                 ngModel
+                 rows="10">
+          </textarea>
+
+        </mat-form-field>
+
+        <mat-card-actions class="card-action">
+            <button mat-raised-button
+                    type="submit"
+                    class="btn btn-default"
+                    color="primary">Update</button>
+        </mat-card-actions>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>
