@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-landing-page-component',
@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./css/landing.component.scss']
 })
 
-export class LandingPageAppComponent {
+export class LandingPageAppComponent implements OnInit {
   title = 'Landing page';
 
-
+  ngOnInit() {}
 
 }

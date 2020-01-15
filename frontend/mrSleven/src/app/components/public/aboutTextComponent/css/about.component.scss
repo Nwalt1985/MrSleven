@@ -16,6 +16,13 @@
   .about-header-image {
     max-width: 200px;
   }
+    .signature {
+    text-align: center;
+    margin: 20px 0;
+    img {
+      max-width: 250px;
+    }
+  }
 }
 
 @media only screen and (min-width: 768px) {
@@ -41,9 +48,4 @@
     width: 100%;
     box-shadow: 4px 4px 7px 1px #5b5b5b;
   }
-  .signature {
-    text-align: center;
-    margin: 20px 0;
-  }
-
 }

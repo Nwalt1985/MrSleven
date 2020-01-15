@@ -1,8 +1,11 @@
 <mat-toolbar class="navigation">
-  <!-- <div class="logo-container"> -->
-    <img class="logo" src="https://res.cloudinary.com/horx2w1dl/image/upload/a_180/v1578069196/images/EB803800-94BA-4195-A02D-02D83A821C0F_n6ipd3.png">
-  <!-- </div> -->
-
+  
+  <span *ngFor="let img of navContent">
+    <img *ngIf="img.public_id === 'images/Navigation/logo'"
+    class="logo" 
+    src="{{ img.url }}">
+  </span>
+  
   <div class="nav">
     <!-- Mobile Navigation -->
     <div class="mobile-nav">

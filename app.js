@@ -8,6 +8,7 @@ const bodyParser      = require('body-parser');
 const mongoose        = require('mongoose');
 const passport        = require('passport');
 const cloudinary      = require('cloudinary');
+const pageError       = require('./models/pageError');
 
 /* 
   Require Passport config
@@ -90,5 +91,6 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
+
 
 module.exports = app;

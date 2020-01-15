@@ -24,7 +24,5 @@ export class AboutTextComponent implements OnInit {
       this.aboutContent = result;
 
     });
-
   }
-
 }
