@@ -55,8 +55,8 @@ const routes: Routes = [
   },
   {
     path: 'admin/gallery',
-    component: AdminGalleryPageComponent
-    // canActivate: [ AuthGuardService ]
+    component: AdminGalleryPageComponent,
+    canActivate: [ AuthGuardService ]
   }
 ];
 

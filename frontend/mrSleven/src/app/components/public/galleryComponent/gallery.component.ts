@@ -3,7 +3,7 @@ import { NgxGalleryOptions,
          NgxGalleryImage,
          NgxGalleryAnimation } from 'ngx-gallery';
 
-// import 'hammerjs';
+import { GalleryImageService } from './gallery.service';
 
 @Component({
   selector: 'app-gallery-component',
@@ -12,13 +12,27 @@ import { NgxGalleryOptions,
 })
 export class GalleryComponent implements OnInit {
 
-  title = 'Gallery';
+  constructor(public galleryService: GalleryImageService) {}
 
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
   galleryLimit = 8;
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.galleryImages = [];
+
+    this.galleryService.getImages().subscribe(result => {
+      for ( const index in result ) {
+        if ( result ) {
+          this.galleryImages.push({
+            small: result[index].secure_url,
+            medium: result[index].secure_url,
+            big: result[index].secure_url,
+            description: result[index].context.custom.alt,
+          });
+        }
+      }
+    });
 
     /* Set the galley options : https://www.npmjs.com/package/ngx-gallery */
     this.galleryOptions = [
@@ -44,17 +58,6 @@ export class GalleryComponent implements OnInit {
         preview: false
       }
     ];
-
-    this.galleryImages = [];
-
-    /* Array of images objects to display */
-    for ( let i = 1; i <= 50; i++ ) {
-      this.galleryImages.push({
-        small: 'https://loremflickr.com/1024/768',
-        medium: 'https://loremflickr.com/1024/768',
-        big: 'https://loremflickr.com/1024/768'
-      });
-    }
 
   }
 

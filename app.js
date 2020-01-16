@@ -37,6 +37,7 @@ const indexRouter = require('./routes/public/index');
 const aboutRouter = require('./routes/public/about');
 const contactRouter = require('./routes/public/contact');
 const navContentRouter = require('./routes/public/nav-content');
+const galleryRouter = require('./routes/public/gallery');
 
 // Admin routes
 const adminRouter = require('./routes/admin/admin');
@@ -65,6 +66,7 @@ app.use('/', indexRouter);
 app.use('/about', aboutRouter);
 app.use('/contact', contactRouter);
 app.use('/nav', navContentRouter);
+app.use('/gallery', galleryRouter);
 
 // Use Admin Routes
 app.use('/admin', adminRouter);
