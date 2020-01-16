@@ -13,9 +13,7 @@ export class LandingPageAppComponent implements OnInit {
   constructor(public visit: PageVisitService ) {}
 
   ngOnInit() {
-    this.visit.logVisit().subscribe((result: object) => {
-      console.log(result);
-    });
+    this.visit.logVisit().subscribe((result: object) => {});
   }
 
 }

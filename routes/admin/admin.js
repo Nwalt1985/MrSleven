@@ -7,7 +7,8 @@ const router = express.Router();
 const ctrlLogin = require('../../passport/loginControl');
 const ctrlCreate = require('../../passport/createControl');
 const adminUserApi = require('./api/users');
-const aboutApi = require('./api/about');
+const adminAboutApi = require('./api/about');
+const adminHomeApi = require('./api/home');
 
 /* JWT token to prevent CSRF attacks */
 const jwt = require('express-jwt');
@@ -23,6 +24,8 @@ router.post('/auth/login', ctrlLogin.login, (req, res, next) => { });
 // Protected routes
 router.get('/auth/profile', auth, (req, res, next) => { adminUserApi.profile(req, res) });
 
+/* ADMIN HOME CONTROL */
+router.get('/auth/get-user-visit', auth, ( req, res, next ) => { adminHomeApi.getUserVisits( req, res )});
 
 /* ADMIN USER CONTROL */
 /* Register new user */
@@ -40,15 +43,15 @@ router.post('/auth/delete', auth, ( req, res, next ) => { adminUserApi.deleteUse
 
 /* ABOUT PAGE CONTROL */
 // About Header
-router.post('/auth/update-about-header', auth, (req, res, next) => { aboutApi.updateAboutHeader(req, res) });
+router.post('/auth/update-about-header', auth, (req, res, next) => { adminAboutApi.updateAboutHeader(req, res) });
 
 // About Images
-router.post('/auth/update-about-image', auth, (req, res, next) => { aboutApi.updateAboutImage(req, res) });
+router.post('/auth/update-about-image', auth, (req, res, next) => { adminAboutApi.updateAboutImage(req, res) });
 
 // About Signature
-router.post('/auth/update-about-signature', auth, (req, res, next) => { aboutApi.updateAboutSignature(req, res) });
+router.post('/auth/update-about-signature', auth, (req, res, next) => { adminAboutApi.updateAboutSignature(req, res) });
 
 // About Signature
-router.post('/auth/update-about-content', auth, (req, res, next) => { aboutApi.updateAboutContent(req, res) });
+router.post('/auth/update-about-content', auth, (req, res, next) => { adminAboutApi.updateAboutContent(req, res) });
 
 module.exports = router;

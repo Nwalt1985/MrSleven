@@ -19,9 +19,12 @@
       color: #DFDFDF;
       margin: 0 auto;
       text-decoration: none;
+      span {
+        font-size: 12px;
+      }
     }
     .icon {
-      font-size: 2.5rem;
+      font-size: 2rem;
       display: block;
       margin-bottom: 0 auto 13px;
       height: auto;
@@ -43,6 +46,14 @@
     height: 100%;
     display: block;
     padding: 20px 0;
+
+    .icon {
+      font-size: 2.5rem;
+    }
+
+    .nav-link span {
+      font-size: 15px;
+    }
 
     .mat-list-base {
       display: block;

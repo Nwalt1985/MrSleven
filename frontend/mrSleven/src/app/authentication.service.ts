@@ -87,7 +87,7 @@ export class AuthenticationService {
   */
   private request(
     method: 'post' | 'get',
-    type: 'login' | 'register' | 'profile' | 'delete' | 'get-users' | 'update-pass'
+    type: 'login' | 'register' | 'profile' | 'delete' | 'get-user-visit' | 'get-users' | 'update-pass'
       | 'update-about-header' | 'update-about-image' | 'update-about-signature'
       | 'update-about-content',
     dataPayload?: TokenPayload | TokenPayloadUser | TokenPayloadUpdatePass
@@ -140,6 +140,10 @@ export class AuthenticationService {
 
   public profile(): Observable<any> {
     return this.request('get', 'profile');
+  }
+
+  public getVisits(): Observable<any> {
+    return this.request('get', 'get-user-visit');
   }
 
   public getAdminUsers(): Observable<any> {
