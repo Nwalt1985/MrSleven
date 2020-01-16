@@ -5,7 +5,9 @@ const mongoose = require('mongoose');
 
 // define the schema for our user model
 const visitSchema = mongoose.Schema({
-    created: { type: Date, default: Date.now }
+    created: { type: Date, default: Date.now },
+    user_ip: String,
+    user_agent: String
 });
 
 // create the model for users and expose it to our app

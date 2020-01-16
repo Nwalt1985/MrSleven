@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PageVisitService } from './landing.service';
 
 @Component({
   selector: 'app-landing-page-component',
@@ -9,6 +10,10 @@ import { Component, OnInit } from '@angular/core';
 export class LandingPageAppComponent implements OnInit {
   title = 'Landing page';
 
-  ngOnInit() {}
+  constructor(public visit: PageVisitService ) {}
+
+  ngOnInit() {
+    this.visit.logVisit().subscribe((result: object) => {});
+  }
 
 }
