@@ -10,8 +10,8 @@
           "style": "scss"
         }
       },
-      "root": "",
-      "sourceRoot": "src",
+      "root": "frontend/mrSleven/",
+      "sourceRoot": "frontend/mrSleven/src",
       "prefix": "app",
       "architect": {
         "build": {
@@ -24,8 +24,8 @@
             "tsConfig": "frontend/mrSleven/tsconfig.app.json",
             "aot": false,
             "assets": [
-              "src/favicon.ico",
-              "src/assets"
+              "frontend/mrSleven/src/favicon.ico",
+              "frontend/mrSleven/src/assets"
             ],
             "styles": [
               "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
