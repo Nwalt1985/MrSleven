@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 // load the things we need
 const mongoose = require('mongoose');
 
