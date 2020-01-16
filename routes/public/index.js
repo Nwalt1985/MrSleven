@@ -4,26 +4,32 @@ const express 	= require('express');
 const router 	= express.Router();
 const Visits = require('../../models/visits');
 
-
 /* Log user visit. */
 router.get("/visit", function(req, res) {
 
-    if (process.env.NODE_ENV === 'production') {
-        const visit = new Visits();
-    
-        if( req.headers['x-forwarded-for'] ) {
-          visit.user_ip = req.headers['x-forwarded-for'];
-        } else {
-          visit.user_ip = req.connection.remoteAddress;
+    try {
+        // Only if site is in production do we want to log user visits
+        if (process.env.NODE_ENV === 'production') {
+            const visit = new Visits();
+            
+            // For Heroku we need to use x-forwarded-for to get user IP
+            if( req.headers['x-forwarded-for'] ) {
+                visit.user_ip = req.headers['x-forwarded-for'];
+            } else {
+                visit.user_ip = req.connection.remoteAddress;
+            }
+            
+            // Log the user agent
+            visit.user_agent = req.headers['user-agent'];
+            
+            visit.save();
+            
+            res.status(200).json({'msg':'Visit logged'});
         }
-    
-        visit.user_agent = req.headers['user-agent'];
-    
-        visit.save();
-    
-        res.status(200);
+        
+    } catch ( err ) {
+        console.error( err );
     }
-
 
 });
 
