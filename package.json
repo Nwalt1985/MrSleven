@@ -10,7 +10,6 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
-    // "postinstall": "ng build --aot --prod"
   },
   "engines": {
     "node": "11.0.0",
