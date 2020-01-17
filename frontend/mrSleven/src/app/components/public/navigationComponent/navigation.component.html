@@ -1,11 +1,11 @@
 <mat-toolbar class="navigation">
-  
+
   <span *ngFor="let img of navContent">
     <img *ngIf="img.public_id === 'images/Navigation/logo'"
-    class="logo" 
-    src="{{ img.url }}">
+    class="logo"
+    src="{{ img.secure_url }}">
   </span>
-  
+
   <div class="nav">
     <!-- Mobile Navigation -->
     <div class="mobile-nav">

@@ -16,7 +16,8 @@ import { MatFormFieldModule,
          MatListModule,
          MatSidenavModule,
          MatCheckboxModule,
-         MatDividerModule } from '@angular/material';
+         MatDividerModule,
+         MatDialogModule } from '@angular/material';
 
 import { FormsModule } from '@angular/forms';
 
@@ -31,6 +32,7 @@ import { ContactPageComponent } from './pages/public/contactPage/contactPage.com
 import { AdminHomePageComponent } from './pages/admin/adminHomePage/adminHomePage.component';
 import { AdminUserPageComponent } from './pages/admin/adminUserPage/adminUserPage.component';
 import { AdminAboutComponent } from './pages/admin/adminAboutPage/adminAbout.component';
+import { AdminGalleryPageComponent } from './pages/admin/adminGalleryPage/adminGalleryPage.component';
 
 /* Components */
 import { LoginAppComponent } from './components/public/loginComponent/login.component';
@@ -38,6 +40,7 @@ import { NavigationAppComponent } from './components/public/navigationComponent/
 import { AboutTextComponent } from './components/public/aboutTextComponent/aboutText.component';
 import { SocialComponent } from './components/public/socialComponent/social.component';
 import { GalleryComponent } from './components/public/galleryComponent/gallery.component';
+import { GalleryImageViewComponent } from './components/public/galleryImageViewComponent/imageViewComponent';
 import { ContactFormComponent } from './components/public/contactFormComponent/contactForm.component';
 import { RegisterComponent } from './components/admin/adminUsers/registerUserComponent/register.component';
 import { SideNavigationComponent } from './components/admin/sideNavComponent/sideNav.component';
@@ -51,7 +54,6 @@ import { AdminAboutImageMobileComponent } from './components/admin/adminAbout/ab
 import { AdminAboutSignatureComponent } from './components/admin/adminAbout/aboutSignature/aboutSignature.component';
 import { AdminAboutTextComponent } from './components/admin/adminAbout/aboutText/aboutText.component';
 import { AdminUserVisitsComponent } from './components/admin/adminHome/adminUserVisits/userVisits.component';
-import { AdminGalleryPageComponent } from './pages/admin/adminGalleryPage/adminGalleryPage.component';
 
 @NgModule({
   declarations: [
@@ -66,6 +68,7 @@ import { AdminGalleryPageComponent } from './pages/admin/adminGalleryPage/adminG
     ContactPageComponent,
     SocialComponent,
     GalleryComponent,
+    GalleryImageViewComponent,
     ContactFormComponent,
     AdminHomePageComponent,
     AdminUserPageComponent,
@@ -98,10 +101,15 @@ import { AdminGalleryPageComponent } from './pages/admin/adminGalleryPage/adminG
     MatIconModule,
     MatSidenavModule,
     MatListModule,
+    MatDialogModule,
     MatDividerModule,
     NgxGalleryModule,
     MatCheckboxModule,
     FormsModule
+  ],
+  entryComponents: [
+    GalleryComponent,
+    GalleryImageViewComponent
   ],
   providers: [],
   bootstrap: [AppComponent]

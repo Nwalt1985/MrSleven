@@ -3,6 +3,9 @@ import { NgxGalleryOptions,
          NgxGalleryImage,
          NgxGalleryAnimation } from 'ngx-gallery';
 
+import { GalleryImageViewComponent } from '../galleryImageViewComponent/imageViewComponent';
+import { MatDialog } from '@angular/material/dialog';
+
 import { GalleryImageService } from './gallery.service';
 
 @Component({
@@ -10,9 +13,11 @@ import { GalleryImageService } from './gallery.service';
   templateUrl: 'gallery.component.html',
   styleUrls: ['css/gallery.component.scss']
 })
+
 export class GalleryComponent implements OnInit {
 
-  constructor(public galleryService: GalleryImageService) {}
+  constructor( public galleryService: GalleryImageService,
+               public dialog: MatDialog ) {}
 
   galleryOptions: NgxGalleryOptions[];
   galleryImages: NgxGalleryImage[];
@@ -58,6 +63,20 @@ export class GalleryComponent implements OnInit {
         preview: false
       }
     ];
+
+  }
+
+  openImageModal( src: string, alt: string ) {
+    const dialogRef = this.dialog.open( GalleryImageViewComponent, {
+      width: '80%',
+      // height: '85vh',
+      data : {
+        url: src,
+        desc: alt
+      }
+    });
+
+    dialogRef.afterClosed().subscribe( result => {});
 
   }
 
