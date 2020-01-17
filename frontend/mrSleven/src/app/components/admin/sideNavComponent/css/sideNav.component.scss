@@ -1,7 +1,6 @@
 .sidenav-container {
   background-color: #000;
-  display: flex;
-  height: 70px;
+  height: 90px;
 
     .mat-list-base {
       display: flex;
@@ -46,6 +45,10 @@
     height: 100%;
     display: block;
     padding: 20px 0;
+
+    .nav-item .mat-list-item-content {
+      padding: 0 16px;
+    }
 
     .icon {
       font-size: 2.5rem;

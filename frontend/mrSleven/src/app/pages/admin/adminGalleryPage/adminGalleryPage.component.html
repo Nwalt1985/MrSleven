@@ -1,6 +1,13 @@
 <app-side-nav-component></app-side-nav-component>
 <div class="container">
-  <h1 class="header">{{title}}</h1>
+  <div class="top-group">
+    <h1 class="header">{{title}}</h1>
+    <a routerLink="/contact" routerLinkActive="active" class="go-to-page">
+      <i class="fas fa-directions fa-lg"></i>
+      <span>Go to page</span>
+    </a>
+  </div>
+
   <div class="instructions-text">
     <ol>
       <li>

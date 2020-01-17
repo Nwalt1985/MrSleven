@@ -57,6 +57,10 @@ $font-color: #393939;
   }
 }
 
+.mat-list-base .mat-list-item .mat-list-item-content {
+  padding: 0 10px !important;
+}
+
 /* Contact Form */
 .contact-form {
   .mat-input-element {
