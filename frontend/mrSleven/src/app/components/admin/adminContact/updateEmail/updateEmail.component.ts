@@ -13,8 +13,6 @@ export class UpdateEmailAddressComponent implements OnInit {
 
   constructor(private auth: AuthenticationService ) { }
 
-  title = 'Contact Form Control';
-
   emailAddress: TokenPayloadEmailAddress = {
     id: '',
     delivery_email: ''

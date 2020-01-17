@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 
 export class AdminPageContactComponent {
-
+  title = 'Contact Form Control';
 }
