@@ -57,7 +57,9 @@ router.post('/auth/update-about-content', auth, (req, res, next) => { adminAbout
 
 
 /* ADMIN CONTACT CONTROL */
-router.get('/auth/get-email-address', auth, ( req, res, next ) => { adminEmailApi.getEmailAddress( req, res )})
+router.get('/auth/get-email-address', auth, ( req, res, next ) => { adminEmailApi.getEmailAddress( req, res )});
+
+router.post('/auth/update-delivery-email', auth, ( req, res, next ) => { adminEmailApi.updateEmailAddress( req, res )});
 
 
 module.exports = router;

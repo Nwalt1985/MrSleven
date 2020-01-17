@@ -49,3 +49,8 @@ export interface TokenPayloadAboutText {
   id: string;
   content: string;
 }
+
+export interface TokenPayloadEmailAddress {
+  id: string;
+  delivery_email: string;
+}
