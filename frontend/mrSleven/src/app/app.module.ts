@@ -33,9 +33,11 @@ import { AdminHomePageComponent } from './pages/admin/adminHomePage/adminHomePag
 import { AdminUserPageComponent } from './pages/admin/adminUserPage/adminUserPage.component';
 import { AdminAboutComponent } from './pages/admin/adminAboutPage/adminAbout.component';
 import { AdminGalleryPageComponent } from './pages/admin/adminGalleryPage/adminGalleryPage.component';
+import { AdminPageContactComponent } from './pages/admin/adminContactPage/adminContact.component';
 
 /* Components */
 import { LoginAppComponent } from './components/public/loginComponent/login.component';
+import { LogoComponent } from './components/public/logoComponent/logo.component';
 import { NavigationAppComponent } from './components/public/navigationComponent/navigation.component';
 import { AboutTextComponent } from './components/public/aboutTextComponent/aboutText.component';
 import { SocialComponent } from './components/public/socialComponent/social.component';
@@ -54,6 +56,7 @@ import { AdminAboutImageMobileComponent } from './components/admin/adminAbout/ab
 import { AdminAboutSignatureComponent } from './components/admin/adminAbout/aboutSignature/aboutSignature.component';
 import { AdminAboutTextComponent } from './components/admin/adminAbout/aboutText/aboutText.component';
 import { AdminUserVisitsComponent } from './components/admin/adminHome/adminUserVisits/userVisits.component';
+import { UpdateEmailAddressComponent } from './components/admin/adminContact/updateEmail/updateEmail.component';
 
 @NgModule({
   declarations: [
@@ -63,6 +66,7 @@ import { AdminUserVisitsComponent } from './components/admin/adminHome/adminUser
     LoginPageComponent,
     LoginAppComponent,
     GalleryPageComponent,
+    LogoComponent,
     NavigationAppComponent,
     AboutTextComponent,
     ContactPageComponent,
@@ -85,7 +89,9 @@ import { AdminUserVisitsComponent } from './components/admin/adminHome/adminUser
     AdminAboutSignatureComponent,
     AdminAboutTextComponent,
     AdminUserVisitsComponent,
-    AdminGalleryPageComponent
+    AdminGalleryPageComponent,
+    AdminPageContactComponent,
+    UpdateEmailAddressComponent
   ],
   imports: [
     BrowserModule,

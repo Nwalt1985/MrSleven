@@ -3,15 +3,12 @@ import { HttpClient } from '@angular/common/http';
 
 @Injectable({ providedIn: 'root' })
 
-export class PageVisitService {
+export class LogoService {
 
   constructor(private http: HttpClient) { }
-
-  logVisit() {
-    return this.http.get('/visit');
-  }
 
   getLogo() {
     return this.http.get('/logo');
   }
+
 }

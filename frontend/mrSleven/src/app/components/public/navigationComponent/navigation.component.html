@@ -1,11 +1,4 @@
 <mat-toolbar class="navigation">
-
-  <span *ngFor="let img of navContent">
-    <img *ngIf="img.public_id === 'images/Navigation/logo'"
-    class="logo"
-    src="{{ img.secure_url }}">
-  </span>
-
   <div class="nav">
     <!-- Mobile Navigation -->
     <div class="mobile-nav">
@@ -13,9 +6,7 @@
         <mat-icon>menu</mat-icon>
       </button>
       <mat-menu #menu="matMenu" class="dropdown-menu">
-
         <div class="nav-item" *ngFor="let link of navContent">
-
           <a class="nav-link-mobile"
               routerLink="{{link.context.custom.href}}"
               routerLinkActive="active"
@@ -24,7 +15,6 @@
             <img class="nav-image" src="{{link.secure_url}}" alt="{{link.context.custom.alt}}">
           </a>
         </div>
-
         <a class="nav-link-mobile"
             *ngIf="auth.isLoggedIn()"
             routerLink="/admin/home"
@@ -32,21 +22,18 @@
             <img src="https://res.cloudinary.com/horx2w1dl/image/upload/v1578072447/images/Navigation/admin.png"
                 alt="admin page navigation link">
           </a>
-
           <a class="nav-link-mobile"
             *ngIf="auth.isLoggedIn()"
             (click)="auth.logout()">
             <img src="https://res.cloudinary.com/horx2w1dl/image/upload/v1578072587/images/Navigation/logout.png"
                 alt="logout page navigation link">
           </a>
-
       </mat-menu>
     </div>
 
     <!-- Desktop Navigation -->
     <div class="desktop-nav">
       <span class="nav-links-group">
-
         <span class="nav-item" *ngFor="let link of navContent">
           <a class="nav-link"
              *ngIf="link.context.custom.is_admin === 'false'"
@@ -56,7 +43,6 @@
                  alt="{{link.context.custom.alt}}">
           </a>
         </span>
-
         <span class="nav-item" *ngIf="auth.isLoggedIn()">
           <a class="nav-link" routerLink="/admin/home" routerLinkActive="active">
             <img src="https://res.cloudinary.com/horx2w1dl/image/upload/v1578072447/images/Navigation/admin.png"

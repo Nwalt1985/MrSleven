@@ -2,16 +2,8 @@
 
 .body .navigation {
   background-color: transparent;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   height: auto;
   padding: 15px;
-
-  .logo {
-    max-width: 120px;
-    box-shadow: none;
-    margin-top: 10px;
-  }
 
   .desktop-nav {
     display: none;
@@ -62,13 +54,8 @@
       display: none;
     }
 
-    .logo {
-      margin-top: 0;
-    }
-
     .desktop-nav {
       display: block;
-      float: right;
 
       .nav-link {
         margin-left: 20px;

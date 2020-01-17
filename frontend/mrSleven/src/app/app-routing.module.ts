@@ -7,12 +7,13 @@ import { AboutPageComponent } from './pages/public/aboutPage/about.component';
 import { LoginPageComponent } from './pages/public/loginPage/login.component';
 import { GalleryPageComponent } from './pages/public/galleryPage/galleryPage.component';
 import { ContactPageComponent } from './pages/public/contactPage/contactPage.component';
-import { AdminGalleryPageComponent } from './pages/admin/adminGalleryPage/adminGalleryPage.component';
 
 /* Admin Components */
 import { AdminHomePageComponent } from './pages/admin/adminHomePage/adminHomePage.component';
 import { AdminUserPageComponent } from './pages/admin/adminUserPage/adminUserPage.component';
 import { AdminAboutComponent } from './pages/admin/adminAboutPage/adminAbout.component';
+import { AdminGalleryPageComponent } from './pages/admin/adminGalleryPage/adminGalleryPage.component';
+import { AdminPageContactComponent } from './pages/admin/adminContactPage/adminContact.component';
 
 /* Authentication for admin pages */
 import { AuthGuardService } from './auth-guard.service';
@@ -56,6 +57,11 @@ const routes: Routes = [
   {
     path: 'admin/gallery',
     component: AdminGalleryPageComponent,
+    canActivate: [ AuthGuardService ]
+  },
+  {
+    path: 'admin/contact',
+    component: AdminPageContactComponent,
     canActivate: [ AuthGuardService ]
   }
 ];

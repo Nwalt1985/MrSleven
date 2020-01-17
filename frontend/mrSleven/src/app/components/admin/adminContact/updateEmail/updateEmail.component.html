@@ -1,0 +1,24 @@
+<mat-card class="card">
+
+  <mat-card-header>
+    <mat-card-title>
+      Update E-mail Address
+    </mat-card-title>
+  </mat-card-header>
+
+  <mat-card-content>
+    <form (submit)="updateEmail( updateEmailAddressForm )" #updateEmailAddressForm="ngForm">
+      <div class="form-container">
+        <mat-form-field>
+          <mat-label>Delivery E-mail</mat-label>
+          <input matInput
+                 type="text"
+                 name="adminEmail"
+                 value="{{emailAddress[0]?.email}}"
+                 #aboutHeaderInput="ngModel"
+                 ngModel>
+        </mat-form-field>
+      </div>
+    </form>
+  </mat-card-content>
+</mat-card>

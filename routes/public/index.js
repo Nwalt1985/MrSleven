@@ -2,10 +2,12 @@ require('dotenv').config();
 
 const express 	= require('express');
 const router 	= express.Router();
+const cloudinary = require('cloudinary');
+
 const Visits = require('../../models/visits');
 
 /* Log user visit. */
-router.get("/visit", function(req, res) {
+router.get('/visit', function(req, res) {
 
     try {
         // Only if site is in production do we want to log user visits
@@ -32,5 +34,15 @@ router.get("/visit", function(req, res) {
     }
 
 });
+
+router.get('/logo', function( req, res ) {
+    try {
+        cloudinary.v2.api.resources_by_tag('logo', { context: true }, (err, result) => {
+            res.status(200).json(result.resources);
+        });
+    } catch (err) {
+        console.error( err );
+    }
+})
 
 module.exports = router;

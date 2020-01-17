@@ -1,13 +1,5 @@
-<div class="video-wrapper">
-  <!-- The video -->
-  <div class="overlay"></div>
-<!--
-  <video [autoplay]="true" [muted]="true" [loop]="true" [controls]="false" id="myVideo">
-    <source src="https://res.cloudinary.com/horx2w1dl/video/upload/v1576265047/video/Blue_f61tlv.mp4" type="video/mp4">
-  </video> -->
-
-  <div class="homepage-content">
-    <img class="logo" src="https://res.cloudinary.com/horx2w1dl/image/upload/a_180/v1578068741/images/EB803800-94BA-4195-A02D-02D83A821C0F_n6ipd3.png">
-    <a class="link" routerLink="/about" routerLinkActive="active">Enter</a>
-  </div>
+<div class="homepage-content">
+  <img class="logo" src="{{logo[0]?.secure_url}}" alt="logo[0]?.context.custom.alt">
+  <a class="link" routerLink="/about" routerLinkActive="active">Enter</a>
 </div>
+

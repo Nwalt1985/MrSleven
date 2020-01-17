@@ -69,7 +69,6 @@ export class GalleryComponent implements OnInit {
   openImageModal( src: string, alt: string ) {
     const dialogRef = this.dialog.open( GalleryImageViewComponent, {
       width: '80%',
-      // height: '85vh',
       data : {
         url: src,
         desc: alt

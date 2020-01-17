@@ -7,7 +7,7 @@
   margin: 10% auto;
 
   input {
-    color: #DFDFDF;
+    color: #333;
     margin: 20px 0;
   }
 
@@ -17,7 +17,7 @@
     button {
       width: 50%;
       background-color: #ff00008f;
-      color: #DFDFDF;
+      color: #fff;
       font-family: 'Permanent Marker', cursive;
       font-size: 1.6rem;
       margin-top: 20px;
@@ -31,7 +31,6 @@
 
 @media only screen and (min-width: 1020px) {
   .contact-form {
-    // margin: 6% auto 2%;
     .form {
       margin: 0 auto;
       position: relative;

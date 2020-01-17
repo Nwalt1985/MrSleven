@@ -89,7 +89,7 @@ export class AuthenticationService {
     method: 'post' | 'get',
     type: 'login' | 'register' | 'profile' | 'delete' | 'get-user-visit' | 'get-users' | 'update-pass'
       | 'update-about-header' | 'update-about-image' | 'update-about-signature'
-      | 'update-about-content',
+      | 'update-about-content' | 'get-email-address',
     dataPayload?: TokenPayload | TokenPayloadUser | TokenPayloadUpdatePass
       | TokenPayloadABoutHeader | TokenPayloadABoutImages | TokenPayloadABoutSignature
       | TokenPayloadAboutText,
@@ -130,14 +130,8 @@ export class AuthenticationService {
     to call the login and register endpoints and save the returned token,
     or the profile endpoint to get the user details.
   */
-  public register(user: TokenPayload): Observable<any> {
-    return this.request('post', 'register', user);
-  }
 
-  public login(user: TokenPayload): Observable<any> {
-    return this.request('post', 'login', user);
-  }
-
+  /* GET REQUESTS */
   public profile(): Observable<any> {
     return this.request('get', 'profile');
   }
@@ -148,6 +142,19 @@ export class AuthenticationService {
 
   public getAdminUsers(): Observable<any> {
     return this.request('get', 'get-users');
+  }
+
+  public getEmailAddress(): Observable<any> {
+    return this.request('get', 'get-email-address');
+  }
+
+  /* POST REQUESTS */
+  public register(user: TokenPayload): Observable<any> {
+    return this.request('post', 'register', user);
+  }
+
+  public login(user: TokenPayload): Observable<any> {
+    return this.request('post', 'login', user);
   }
 
   public delete(user: TokenPayloadUser): Observable<any> {
@@ -173,7 +180,6 @@ export class AuthenticationService {
   public updateAboutText(content: TokenPayloadAboutText ): Observable<any> {
     return this.request('post', 'update-about-content', content);
   }
-
 
 }
 
