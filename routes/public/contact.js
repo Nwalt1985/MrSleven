@@ -7,6 +7,8 @@ const EmailLog = require('../../models/contact');
 
 /* GET home page. */
 router.post("/send", function (req, res) {
+
+    const user_ip = req.headers['x-forwarded-for'];
     
     // Get delivery email from DB
     Email.find({}, { _id: 0 }).exec(function (err, result) {
@@ -43,7 +45,7 @@ router.post("/send", function (req, res) {
                 logEmail.email_from = sender_email;
                 logEmail.sender_name = sender_name;
                 logEmail.subject = message_subject;
-                logEmail.from_ip = response.headers['x-forwarded-for'];
+                logEmail.from_ip = user_ip;
 
                 logEmail.save();
 
