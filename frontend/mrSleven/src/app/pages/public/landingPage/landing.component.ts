@@ -16,13 +16,13 @@ export class LandingPageAppComponent implements OnInit {
   ngOnInit() {
     this.visit.logVisit().subscribe((result: object) => {});
 
-    this.visit.getLogo().subscribe((result: object) => {
-      for( const index in result ) {
-        if ( result ) {
-          this.logo.push( result[ index ]);
-        }
-      }
-     });
+    // this.visit.getLogo().subscribe((result: object) => {
+    //   for( const index in result ) {
+    //     if ( result ) {
+    //       this.logo.push( result[ index ]);
+    //     }
+    //   }
+    //  });
   }
 
 }
