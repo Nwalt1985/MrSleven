@@ -20,10 +20,13 @@
     display: grid;
     grid-template-columns: repeat( 4, minmax(250px, 1fr));
     grid-gap: 1rem;
+    grid-template-rows: repeat( 2, 18vw );
 
     .gallery-image {
       width: 100%;
-      box-shadow: 4px 4px 7px 1px #5b5b5b;
+      // box-shadow: 4px 4px 7px 1px #5b5b5b;
+      height: 100%;
+      object-fit: contain;
     }
 
   }

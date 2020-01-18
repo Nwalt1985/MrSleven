@@ -4,6 +4,9 @@
   background-color: transparent;
   height: auto;
   padding: 15px;
+  position: relative;
+  top: 15px;
+  right: 15px;
 
   .desktop-nav {
     display: none;
@@ -47,8 +50,10 @@
 @media only screen and (min-width: 1020px) {
 
   .body .navigation {
-    padding: 10px 0px 10px 30px;
+    // padding: 10px 0px 10px 30px;
     background: transparent;
+    top: 0;
+    right: 0;
 
     .mobile-nav {
       display: none;
@@ -60,7 +65,7 @@
       .nav-link {
         margin-left: 20px;
           img {
-            max-width: 100px;
+            max-width: 120px;
             padding-top: 10px;
           }
       }

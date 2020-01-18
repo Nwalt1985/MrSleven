@@ -6,12 +6,12 @@
 </div>
 
 <div class="container gallery-desktop">
-  <div *ngFor="let img of galleryImages.slice(0, galleryLimit)">
+  <figure *ngFor="let img of galleryImages.slice(0, galleryLimit)" class="gallery-item">
     <img class="gallery-image" src="{{img.big}}" alt="{{img.description}}" (click)="openImageModal( img.big, img.description )">
-  </div>
+  </figure>
 </div>
 
-<div class="show-more">
+<div class="show-more" *ngIf="galleryImages.length > 8">
   <button mat-fab (click)="showMore()">
     <mat-icon aria-hidden="false" aria-label="show more">keyboard_arrow_down</mat-icon>
   </button>

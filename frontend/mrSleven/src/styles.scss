@@ -12,11 +12,6 @@ $font-color: #393939;
   color: $font-color;
 }
 
-.container {
-  margin: 0 auto 5%;
-  max-width: 90%;
-}
-
 .card {
   background: #eee;
   margin-bottom: 1rem;
@@ -82,7 +77,12 @@ $font-color: #393939;
   grid-gap: 1rem;
   grid-template-columns: 1fr;
 }
-
+@media only screen and (min-width: 450px) {
+  .container {
+    margin: 0 auto 5%;
+    max-width: 95%;
+  }
+}
 @media only screen and (min-width: 768px) {
   .grid-container {
     grid-template-columns: 1fr 1fr;
@@ -97,6 +97,6 @@ $font-color: #393939;
 @media only screen and (min-width: 1020px) {
   .container {
     max-width: 80%;
-    margin: 2% auto 0;
+    margin: 0 auto ;
   }
 }
