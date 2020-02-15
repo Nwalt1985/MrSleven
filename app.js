@@ -8,13 +8,14 @@ const bodyParser      = require('body-parser');
 const mongoose        = require('mongoose');
 const passport        = require('passport');
 const cloudinary      = require('cloudinary');
+const helmet          = require('helmet');
 
-/* 
+/*
   Require Passport config
 */
 require('./passport/passport');
 
-/* 
+/*
 Connect to Mongo Atlas
 */
 mongoose.connect(process.env.MONGODB_URI, {
@@ -43,6 +44,8 @@ const galleryRouter = require('./routes/public/gallery');
 const adminRouter = require('./routes/admin/admin');
 
 const app = express();
+
+app.use(helmet());
 
 global.year = new Date().getFullYear();
 
