@@ -53,7 +53,7 @@ global.year = new Date().getFullYear();
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
-app.use(bodyParser.urlencoded( { extended: true } )); // get information from html forms
+// app.use(bodyParser.urlencoded( { extended: true } )); // get information from html forms
 app.use(bodyParser.json()); // get information from html forms
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
