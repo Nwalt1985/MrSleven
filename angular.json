@@ -10,7 +10,7 @@
           "style": "scss"
         }
       },
-      "root": "frontend/mrSleven/",
+      "root": "frontend/mrSleven/src",
       "sourceRoot": "frontend/mrSleven/src",
       "prefix": "app",
       "architect": {
@@ -21,7 +21,7 @@
             "index": "frontend/mrSleven/src/index.html",
             "main": "frontend/mrSleven/src/main.ts",
             "polyfills": "frontend/mrSleven/src/polyfills.ts",
-            "tsConfig": "frontend/mrSleven/tsconfig.app.json",
+            "tsConfig": "tsconfig.app.json",
             "aot": false,
             "assets": [
               "frontend/mrSleven/src/favicon.ico",
@@ -83,48 +83,16 @@
             "browserTarget": "mycms:build"
           }
         },
-        "test": {
-          "builder": "@angular-devkit/build-angular:karma",
-          "options": {
-            "main": "frontend/mrSleven/src/test.ts",
-            "polyfills": "frontend/mrSleven/src/polyfills.ts",
-            "tsConfig": "frontend/mrSleven/tsconfig.spec.json",
-            "karmaConfig": "frontend/mrSleven/karma.conf.js",
-            "assets": [
-              "src/favicon.ico",
-              "src/assets"
-            ],
-            "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
-              "./frontend/mrSleven/src/styles.scss",
-              "./node_modules/font-awesome/css/font-awesome.css"
-            ],
-            "scripts": []
-          }
-        },
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": [
-              "frontend/mrSleven/tsconfig.app.json",
-              "frontend/mrSleven/tsconfig.spec.json",
-              "frontend/mrSleven/e2e/tsconfig.json"
+              "tsconfig.app.json",
+              "tsconfig.spec.json"
             ],
             "exclude": [
               "**/node_modules/**"
             ]
-          }
-        },
-        "e2e": {
-          "builder": "@angular-devkit/build-angular:protractor",
-          "options": {
-            "protractorConfig": "frontend/mrSleven/e2e/protractor.conf.js",
-            "devServerTarget": "mycms:serve"
-          },
-          "configurations": {
-            "production": {
-              "devServerTarget": "mycms:serve:production"
-            }
           }
         }
       }

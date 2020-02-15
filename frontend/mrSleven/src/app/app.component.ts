@@ -8,6 +8,6 @@ import { AuthenticationService } from './authentication.service';
 })
 export class AppComponent {
   title = 'mrSleven';
-  
+
   constructor(public auth: AuthenticationService) {}
 }
